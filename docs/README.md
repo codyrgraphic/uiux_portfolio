@@ -29,7 +29,7 @@ Follow these steps to update NARAI to a new version.
 
 - Tag the commit with the new version number.
   <br>
-  `  git tag -a v.x.x.x -m "Message about the updates broadly"`
+  `  git tag -a vx.x.x -m "Message about the updates broadly"`
 
 ### Push Changes
 

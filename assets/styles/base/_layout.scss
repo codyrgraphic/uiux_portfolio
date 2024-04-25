@@ -1,0 +1,40 @@
+.section {
+  display: flex;
+  height: 100vh;
+  max-height: 960px;
+  padding-left: var(--spacing-2xl);
+  padding-right: var(--spacing-2xl);
+  gap: var(--spacing-xl);
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  max-width: 1000px;
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    width: 100%;
+  }
+}
+
+input {
+  padding: var(--spacing-m) var(--spacing-s);
+  align-items: center;
+  width: 100%; // To ensure it stretches within the container
+  box-sizing: border-box; // Include padding and border in the element's total width and height
+  font-weight: var(--font-weight-light);
+  border-radius: var(--corner-m);
+  border: 0.5px solid var(--token-color-border-b);
+  background-color: transparent; // Assuming you want the inputs to match the dark background
+  color: var(--token-color-text-a); // Text color suitable for dark backgrounds
+  &:focus {
+    outline: none;
+  }
+}
+
+input::placeholder {
+  color: var(--token-color-text-b);
+  font-weight: var(--font-weight-light);
+}

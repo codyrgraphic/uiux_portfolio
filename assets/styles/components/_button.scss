@@ -1,0 +1,41 @@
+.button {
+  @include font-gotham;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  height: var(--spacing-btn);
+  border-radius: var(--corner-l);
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  background-color: var(--token-color-surface-b);
+  color: var(--token-color-text-a);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-medium);
+
+  &:hover {
+    background-color: var(--token-color-surface-c);
+  }
+
+  &:active {
+    transform: scale(0.99);
+    color: var(--token-color-text-b);
+  }
+
+  &--primary {
+    background-color: var(--token-color-surface-b);
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid var(--token-color-border-a);
+
+  }
+
+  &--tertiary {
+height:fit-content;
+background-color: transparent;
+padding: 0;
+  }
+}

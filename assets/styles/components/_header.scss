@@ -1,0 +1,59 @@
+header {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background: var(--token-color-surface-d);
+  padding-left: var(--spacing-xl, 24px);
+  padding-right: var(--spacing-xl, 24px);
+  height: var(--spacing-header);
+
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    .icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/icons/bars-alt.svg") no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    &.is-visible {
+      display: block;
+    }
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: var(--spacing-header);
+    background: var(--token-color-surface-d);
+    ul {
+      li {
+        padding: var(--spacing-l) var(--spacing-3xl);
+        justify-items: center;
+        align-items: center;
+        a {
+          display: inline;
+          color: var(--token-color-text-a);
+          text-decoration: none;
+          &:hover {
+            color: var(--token-color-text-b);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.section h1 .highlight {
+  background-image: var(
+    --token-color-surface-multi
+  ); // Applying the image to the span
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; // This will make the text show the background
+  display: inline; // Use inline or inline-block depending on layout needs
+  background-position: 1050% 1500%; // Adjust position as needed
+}
+
+.section h1 {
+  font-weight: var(--font-weight-book);
+}
+
+.section p .highlight {
+  font-weight: var(--font-weight-book);
+  color: var(--token-color-text-a);
+}
