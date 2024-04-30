@@ -64,6 +64,13 @@ li {
   font-weight: var(--font-weight-book);
 }
 
+label {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-book);
+  display: flex;
+  flex-direction: row;
+}
+
 @mixin font-gotham {
   font-family: "Gotham", Arial, sans-serif;
   font-weight: 500; //

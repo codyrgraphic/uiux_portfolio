@@ -12,6 +12,8 @@
     <title>codyr.co</title>
     <link rel="stylesheet" href="assets/styles/main.css" />
     <script src="/assets/js/menu-toggle.js" defer></script>
+    <script src="/assets/js/message-field-auto-expand.js" defer></script>
+    <script src="/assets/js/email-form-states.js" defer></script>
   </head>
   <body>
     <header>
@@ -22,7 +24,7 @@
       <nav class="dropdown-menu" aria-label="Main navigation" hidden>
         <ul>
           <li><a href="/projects">Projects</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about">About</about:blank#blockeda></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/resume">Résumé</a></li>
         </ul>
@@ -32,7 +34,9 @@
     <section class="section">
       <h1>
         Transforming ideas into
-        <span class="highlight">Exceptional Digital Experiences</span>
+        <span class="highlight" data-text="exceptional digital experiences"
+          >exceptional digital experiences</span
+        >
       </h1>
 
       <p>
@@ -61,18 +65,47 @@
         <span> Discuss a project, collaborate or just</span
         ><span class="highlight"> say hello.</span>
       </p>
-      <div class="input-section">
-        <h6>Email</h6>
-        <input type="email" placeholder="eg. john.smith@email.com" />
-      </div>
-      <div class="input-section">
-        <h6>Message</h6>
-        <input type="text" title="message" placeholder="Write your message" />
-      </div>
-      <button class="button button--primary">Send Message</button>
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://formspree.io/f/xdoqbkjw"
+        method="POST"
+      >
+        <div class="input-section">
+          <label type="email" name="email" for="email">
+            <div class="top">
+              <h6>Email *</h6>
+              <p id="email-error" class="error-message">
+                Invalid email, try another
+              </p>
+            </div>
+            <input
+              type="email"
+              id="email"
+              class="input-field"
+              placeholder="eg. john.smith@email.com"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+          </label>
+        </div>
+        <div class="input-section">
+          <label for="message">
+            <div class="top">
+              <h6>Message</h6>
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Write your message"
+            ></textarea>
+          </label>
+        </div>
+        <button type="submit" class="button button--primary button--auto-width">
+          Send
+        </button>
+      </form>
     </section>
-    <footer>
-      <p>Copyright &copy; 2024 Cody Roberts. All rights reserved.</p>
-    </footer>
+    <footer></footer>
   </body>
 </html>

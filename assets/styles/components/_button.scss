@@ -5,6 +5,7 @@
   height: var(--spacing-btn);
   border-radius: var(--corner-l);
   border: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -19,23 +20,36 @@
   }
 
   &:active {
-    transform: scale(0.99);
+    transform: scale(0.97);
     color: var(--token-color-text-b);
   }
 
+  // Primary style
   &--primary {
     background-color: var(--token-color-surface-b);
   }
 
+  // Secondary style
   &--secondary {
     background-color: transparent;
     border: 1px solid var(--token-color-border-a);
-
   }
 
+  // Tertiary style
   &--tertiary {
-height:fit-content;
-background-color: transparent;
-padding: 0;
+    height: fit-content;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  // Full-width modifier
+  &--full-width {
+    width: 100%;
+  }
+
+  // Auto-width modifier
+  &--auto-width {
+    width: auto;
+    max-width: fit-content;
   }
 }
