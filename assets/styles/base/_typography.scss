@@ -63,11 +63,11 @@ input::placeholder {
 }
 
 .input-error {
-  color: var(--token-color-text-bad-a); /* Set the text color to red on error */
+  color: var(--token-color-text-bad-a);
 }
 
 .input-error::placeholder {
-  color: var(--token-color-text-bad-a);
+  color: var(--token-color-text-bad-b);
 }
 
 textarea {

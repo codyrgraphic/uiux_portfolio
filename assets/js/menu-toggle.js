@@ -1,15 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.dropdown-menu');
+  const navLinks = document.querySelectorAll('.dropdown-menu a');
 
-  toggle.addEventListener('click', () => {
+  function toggleMenu() {
+    // Toggle the 'aria-expanded' state based on its presence
     const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', !isExpanded);
-    if (menu.hasAttribute('hidden')) {
-      menu.removeAttribute('hidden');
+    menu.toggleAttribute('hidden');
+
+    // Toggle visibility class for potential CSS animations or transitions
+    menu.classList.toggle('is-visible');
+
+    // Manage focus when the menu is opened
+    if (menu.classList.contains('is-visible')) {
+      menu.querySelectorAll('a')[0].focus();
     } else {
-      menu.setAttribute('hidden', '');
+      toggle.focus();
     }
-    menu.classList.toggle('is-visible'); // This will handle the visibility through CSS
+  }
+
+  toggle.addEventListener('click', toggleMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
   });
 });

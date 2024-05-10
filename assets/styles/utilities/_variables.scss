@@ -34,7 +34,7 @@
   --color-white-t100: rgba(255, 255, 255, 0.5);
   --color-white-t200: rgba(255, 255, 255, 0.2);
   --color-red-s100: #ff0000;
-  --color-red-t100: #ff0000;
+  --color-red-t100: #ff00004d;
   --color-green-s100: #14ff00;
   --color-blue-s100: #0071a4;
   --color-multi-s100: url(/assets/images/multi-s100.webp);
@@ -51,7 +51,7 @@
   --token-color-text-a: var(--color-white-s100);
   --token-color-text-b: var(--color-white-t100);
   --token-color-text-bad-a: var(--color-red-s100);
-  --token-color-text-bad-b: var(--color-red-s100);
+  --token-color-text-bad-b: var(--color-red-t100);
   --token-color-border-a: var(--color-white-t100);
   --token-color-border-b: var(--color-white-t200);
   --token-color-border-bad: var(--color-red-s100);

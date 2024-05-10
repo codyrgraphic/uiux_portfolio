@@ -1,0 +1,162 @@
+// Padding Utilities
+@each $name,
+  $size
+    in (
+      3xs: 2px,
+      2xs: 4px,
+      xs: 6px,
+      s: 8px,
+      m: 12px,
+      l: 16px,
+      xl: 24px,
+      2xl: 36px,
+      3xl: 64px,
+      4xl: 80px
+    )
+{
+  .p-#{$name} {
+    padding: $size;
+  }
+  .pt-#{$name} {
+    padding-top: $size;
+  }
+  .pr-#{$name} {
+    padding-right: $size;
+  }
+  .pb-#{$name} {
+    padding-bottom: $size;
+  }
+  .pl-#{$name} {
+    padding-left: $size;
+  }
+  .px-#{$name} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+  .py-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}
+
+// Margin Utilities
+@each $name,
+  $size
+    in (
+      3xs: 2px,
+      2xs: 4px,
+      xs: 6px,
+      s: 8px,
+      m: 12px,
+      l: 16px,
+      xl: 24px,
+      2xl: 36px,
+      3xl: 64px,
+      4xl: 80px
+    )
+{
+  .m-#{$name} {
+    margin: $size;
+  }
+  .mt-#{$name} {
+    margin-top: $size;
+  }
+  .mr-#{$name} {
+    margin-right: $size;
+  }
+  .mb-#{$name} {
+    margin-bottom: $size;
+  }
+  .ml-#{$name} {
+    margin-left: $size;
+  }
+  .mx-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+  .my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+}
+
+// Gap Utilities
+@each $name, $size in (s: 8px, m: 12px, l: 16px, xl: 24px, 2xl: 36px) {
+  .gap-#{$name} {
+    gap: $size;
+  }
+}
+
+// Border Radius Utilities
+@each $name,
+  $size in (xs: 4px, s: 6px, m: 8px, l: 12px, xl: 16px, 2xl: 20px, 3xl: 24px)
+{
+  .corner-#{$name} {
+    border-radius: $size;
+  }
+}
+
+// Flexbox display
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Flexbox alignment
+.ali-center {
+  align-items: center;
+}
+.ali-start {
+  align-items: flex-start;
+}
+.ali-end {
+  align-items: flex-end;
+}
+.ali-stretch {
+  align-items: stretch;
+}
+.ali-baseline {
+  align-items: baseline;
+}
+
+// Flexbox justification
+.jus-start {
+  justify-content: flex-start;
+}
+.jus-end {
+  justify-content: flex-end;
+}
+.jus-center {
+  justify-content: center;
+}
+.jus-between {
+  justify-content: space-between;
+}
+.jus-around {
+  justify-content: space-around;
+}
+.jus-evenly {
+  justify-content: space-evenly;
+}
+
+// Flex item properties
+.flex-1 {
+  flex: 1;
+}
+.flex-auto {
+  flex: auto;
+}
+.flex-none {
+  flex: none;
+}
