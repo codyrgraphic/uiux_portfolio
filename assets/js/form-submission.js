@@ -16,7 +16,7 @@ async function handleFormSubmit(event) {
       method: 'POST',
       body: new URLSearchParams(data),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       }
     });
 
