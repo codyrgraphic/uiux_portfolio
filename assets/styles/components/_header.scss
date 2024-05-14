@@ -74,8 +74,8 @@ header {
 
 @media (max-width: 768px) {
   .dropdown-menu {
-    width: 100%; // Make the dropdown full width
-    left: 0; // Align to the left side of the viewport
+    width: 100%;
+    left: 0;
     top: var(--spacing-header);
     border-radius: 0px 0px var(--corner-2xl) var(--corner-2xl);
     li {
