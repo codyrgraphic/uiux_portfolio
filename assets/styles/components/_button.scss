@@ -3,6 +3,8 @@
   padding-left: var(--spacing-xl);
   padding-right: var(--spacing-xl);
   height: var(--spacing-btn);
+  min-height: var(--spacing-btn);
+  width: auto;
   border-radius: var(--corner-l);
   border: none;
   display: flex;

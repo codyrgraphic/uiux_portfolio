@@ -2,6 +2,7 @@
   display: flex;
   height: 100vh;
   max-height: 91200px;
+  min-height: 640px;
   padding-left: var(--spacing-2xl);
   padding-right: var(--spacing-2xl);
   gap: var(--spacing-2xl);
@@ -10,6 +11,10 @@
   align-items: baseline;
   width: 100%;
   max-width: 1200px;
+
+  @media (max-width: 768px) {
+    padding-top: calc(var(--spacing-header) + var(--spacing-l));
+  }
 
   .input-section {
     display: flex;
