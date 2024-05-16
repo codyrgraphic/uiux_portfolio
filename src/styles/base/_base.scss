@@ -1,0 +1,76 @@
+html,
+body {
+  transition: all 0.2s ease;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gotham", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--token-color-text-b);
+  background-color: var(--token-color-surface-a);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-medium);
+  color: var(--token-color-text-a);
+  line-height: 130%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-book);
+}
+
+label {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-book);
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin font-gotham {
+  font-family: "Gotham", Arial, sans-serif;
+  font-weight: 500; //
+}

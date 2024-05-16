@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I'm Cody Roberts, a UI/UX designer with a passion for problem-solving through design"
+    />
+    <meta name="keywords" content="add, your, keywords, here" />
+    <meta name="author" content="Cody Roberts" />
+    <title>codyr.co</title>
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/button-interactions.js" defer></script>
+    <script type="module" src="js/device-checker.js" defer></script>
+    <script type="module" src="js/email-form-states.js" defer></script>
+    <script type="module" src="js/email-subject.js" defer></script>
+    <script type="module" src="js/form-submission.js" defer></script>
+    <script type="module" src="js/menu-toggle.js" defer></script>
+    <script type="module" src="js/message-field-auto-expand.js" defer></script>
+    <script type="module" src="js/resize-transition.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">codyr.co</h1>
+      <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">
+        <span class="icon"></span>
+      </button>
+    </header>
+    <nav class="dropdown-menu" aria-label="Main navigation" hidden>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/resume">Résumé</a></li>
+      </ul>
+    </nav>
+
+    <section id="intro" class="section">
+      <h1>
+        Transforming ideas into
+        <span class="highlight" data-text="exceptional digital experiences"
+          >exceptional digital experiences</span
+        >
+      </h1>
+
+      <p>
+        I'm Cody Roberts, a UI/UX designer with a passion for problem-solving
+        through design.
+      </p>
+      <button class="button button--primary" onclick="location.href='#contact'">
+        Get in touch
+      </button>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-label">Project 1</div>
+      </div>
+      <div class="project">
+        <div class="project-label">Project 2</div>
+      </div>
+      <div class="project">
+        <div class="project-label">Project 3</div>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+    </section>
+
+    <section id="contact" class="section">
+      <h1>Get in touch</h1>
+
+      <div class="flex flex-column gap-l ali-start">
+        <p>
+          <span> Discuss a project, collaborate or just</span
+          ><span class="highlight"> say hello.</span>
+        </p>
+
+        <div class="contact-icons">
+          <a
+            href="https://www.linkedin.com/in/codyrco"
+            target="_blank"
+            id="linkedin"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-2 -2 24 24"
+              width="36"
+              height="36"
+            >
+              <path
+                d="M18.52.5H1.477C.66.5 0 1.145 0 1.941v17.114c0 .797.66 1.445 1.477 1.445H18.52c.816 0 1.48-.648 1.48-1.441V1.94C20 1.145 19.336.5 18.52.5M5.934 17.543h-2.97V7.996h2.97zM4.449 6.695a1.72 1.72 0 1 1-.006-3.439 1.72 1.72 0 0 1 .006 3.44m12.594 10.848h-2.965v-4.64c0-1.106-.02-2.532-1.543-2.532-1.543 0-1.777 1.207-1.777 2.453v4.719H7.797V7.996h2.844v1.305h.039c.394-.75 1.363-1.543 2.804-1.543 3.004 0 3.559 1.976 3.559 4.547z"
+              />
+            </svg>
+          </a>
+          <a href="https://m.me/codycurbside" target="_blank" id="messenger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-2 -2 24 24"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M0 10.2C0 4.627 4.368.5 10 .5c5.633 0 10 4.13 10 9.702 0 5.573-4.367 9.7-10 9.7-1.012 0-1.982-.135-2.895-.385a.8.8 0 0 0-.535.04l-1.985.875a.8.8 0 0 1-1.122-.707l-.055-1.78a.8.8 0 0 0-.268-.57C1.195 15.635 0 13.115 0 10.2m6.933-1.823-2.938 4.66c-.282.448.268.95.688.63l3.155-2.395a.6.6 0 0 1 .722-.002l2.338 1.752a1.5 1.5 0 0 0 2.17-.4l2.94-4.657c.28-.448-.27-.953-.69-.633l-3.155 2.395a.6.6 0 0 1-.723.003L9.103 7.977a1.5 1.5 0 0 0-2.17.4"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a href="tel:+61413828765">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-5 0 24 24"
+              width="34"
+              height="34"
+            >
+              <path
+                d="M3.09896 24.9527H11.5413C12.4756 24.9527 13.2257 24.6812 13.7915 24.1382C14.3573 23.5951 14.6403 22.8792 14.6403 21.9906V3.79559C14.6403 2.90692 14.3573 2.19105 13.7915 1.64797C13.2257 1.1049 12.4756 0.833359 11.5413 0.833359H3.09896C2.17231 0.833359 1.42415 1.1049 0.854492 1.64797C0.284831 2.19105 0 2.90692 0 3.79559V21.9906C0 22.8792 0.284831 23.5951 0.854492 24.1382C1.42415 24.6812 2.17231 24.9527 3.09896 24.9527ZM3.33822 23.1185C2.85211 23.1185 2.47993 22.9951 2.22168 22.7482C1.96344 22.5013 1.83431 22.1501 1.83431 21.6944V4.09182C1.83431 3.63609 1.96344 3.2848 2.22168 3.03795C2.47993 2.79109 2.85211 2.66767 3.33822 2.66767H4.79655C4.97884 2.66767 5.06998 2.75502 5.06998 2.92971V3.19175C5.06998 3.42721 5.14214 3.619 5.28646 3.76711C5.43077 3.91522 5.62066 3.98928 5.85612 3.98928H8.79557C9.03862 3.98928 9.23041 3.91522 9.37094 3.76711C9.51145 3.619 9.5817 3.42721 9.5817 3.19175V2.92971C9.5817 2.75502 9.67285 2.66767 9.85515 2.66767H11.3135C11.792 2.66767 12.1604 2.79109 12.4186 3.03795C12.6769 3.2848 12.806 3.63609 12.806 4.09182V21.6944C12.806 22.1501 12.6769 22.5013 12.4186 22.7482C12.1604 22.9951 11.792 23.1185 11.3135 23.1185H3.33822ZM4.91048 22.2868H9.75261C9.90452 22.2868 10.0298 22.2374 10.1286 22.1386C10.2273 22.0399 10.2767 21.9108 10.2767 21.7513C10.2767 21.5918 10.2273 21.4645 10.1286 21.3696C10.0298 21.2747 9.90452 21.2272 9.75261 21.2272H4.91048C4.75857 21.2272 4.63135 21.2747 4.52881 21.3696C4.42627 21.4645 4.375 21.5918 4.375 21.7513C4.375 21.9108 4.42627 22.0399 4.52881 22.1386C4.63135 22.2374 4.75857 22.2868 4.91048 22.2868Z"
+              />
+            </svg>
+          </a>
+          <a href="mailto:hello@codyr.co">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36"
+              height="36"
+            >
+              <path
+                d="M19 4.5H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3m-.41 2-5.88 5.88a1 1 0 0 1-1.42 0L5.41 6.5zm1.41 11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7.91l5.88 5.88a3 3 0 0 0 4.24 0L20 7.91z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <form
+        id="contact-form"
+        class="contact-form"
+        method="POST"
+        novalidate
+        netlify
+        data-netlify="true"
+        onsubmit="handleFormSubmit(event)"
+      >
+        <div class="input-section">
+          <label for="email">
+            <div class="top">
+              <span>Email *</span>
+              <p id="email-error" class="error-message">
+                Invalid email, try another
+              </p>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input-field"
+              placeholder="eg. john.smith@email.com"
+              required
+              pattern="^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$"
+              autocomplete="email"
+              oninput="updateSubject(this.value)"
+            />
+          </label>
+        </div>
+        <div class="input-section">
+          <label for="message">
+            <div class="top">
+              <span>Message</span>
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Write your message"
+            ></textarea>
+          </label>
+        </div>
+        <input type="hidden" name="subject" id="email-subject" />
+        <button type="submit" class="button button--primary button--auto-width">
+          Send
+        </button>
+      </form>
+    </section>
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      style="display: none"
+    >
+      <span id="toast-message"></span>
+      <button
+        onclick="hideToast()"
+        aria-label="Close notification"
+        style="cursor: pointer"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 -3 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.2928 2.93119L8.8053 6.41883C8.72413 6.49996 8.61406 6.54554 8.4993 6.54554C8.38453 6.54554 8.27446 6.49996 8.19329 6.41883L4.70583 2.93119C4.62208 2.84743 4.52265 2.78099 4.41323 2.73566C4.3038 2.69032 4.18652 2.66699 4.06808 2.66698C3.94963 2.66697 3.83235 2.69029 3.72292 2.73561C3.61348 2.78093 3.51405 2.84736 3.43029 2.9311C3.34653 3.01485 3.28009 3.11428 3.23475 3.2237C3.18942 3.33313 3.16608 3.45041 3.16608 3.56885C3.16607 3.6873 3.18939 3.80458 3.23471 3.91401C3.28003 4.02344 3.34645 4.12288 3.4302 4.20664L6.91784 7.69428C6.99898 7.77545 7.04455 7.88552 7.04455 8.00028C7.04455 8.11505 6.99898 8.22512 6.91784 8.30629L3.4302 11.7938C3.34644 11.8775 3.28 11.9769 3.23467 12.0864C3.18934 12.1958 3.16602 12.3131 3.16602 12.4316C3.16602 12.55 3.18934 12.6673 3.23467 12.7767C3.28 12.8862 3.34644 12.9856 3.4302 13.0694C3.51396 13.1531 3.6134 13.2196 3.72283 13.2649C3.83227 13.3102 3.94956 13.3336 4.06801 13.3336C4.18647 13.3336 4.30376 13.3102 4.41319 13.2649C4.52263 13.2196 4.62207 13.1531 4.70583 13.0694L8.19382 9.58174C8.27499 9.5006 8.38506 9.45503 8.49983 9.45503C8.61459 9.45503 8.72466 9.5006 8.80583 9.58174L12.2928 13.0694C12.462 13.2385 12.6914 13.3334 12.9306 13.3334C13.1698 13.3334 13.3992 13.2385 13.5684 13.0694C13.7375 12.9002 13.8324 12.6708 13.8324 12.4316C13.8324 12.1924 13.7375 11.963 13.5684 11.7938L10.0807 8.30629C9.99961 8.22512 9.95404 8.11505 9.95404 8.00028C9.95404 7.88552 9.99961 7.77545 10.0807 7.69428L13.5686 4.20611C13.7377 4.03696 13.8327 3.80757 13.8327 3.56838C13.8327 3.3292 13.7377 3.09981 13.5686 2.93066C13.4848 2.8468 13.3854 2.78028 13.2759 2.73491C13.1664 2.68954 13.0491 2.66621 12.9306 2.66626C12.812 2.66631 12.6947 2.68974 12.5853 2.7352C12.4758 2.78066 12.3764 2.84726 12.2928 2.93119Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <footer></footer>
+  </body>
+</html>

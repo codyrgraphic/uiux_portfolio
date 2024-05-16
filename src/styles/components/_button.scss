@@ -1,0 +1,59 @@
+.button {
+  @include font-gotham;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  height: var(--spacing-btn);
+  min-height: var(--spacing-btn);
+  width: auto;
+  border-radius: var(--corner-l);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  background-color: var(--token-color-surface-b);
+  color: var(--token-color-text-a);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-medium);
+
+  &:hover {
+    background-color: var(--token-color-surface-c);
+  }
+
+  &:active,
+  &.pressed {
+    transform: scale(0.97);
+    color: var(--token-color-text-b);
+    background-color: var(--token-color-surface-b); // Adjust color as needed
+  }
+
+  // Primary style
+  &--primary {
+    background-color: var(--token-color-surface-b);
+  }
+
+  // Secondary style
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid var(--token-color-border-a);
+  }
+
+  // Tertiary style
+  &--tertiary {
+    height: fit-content;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  // Full-width modifier
+  &--full-width {
+    width: 100%;
+  }
+
+  // Auto-width modifier
+  &--auto-width {
+    width: auto;
+    max-width: fit-content;
+  }
+}

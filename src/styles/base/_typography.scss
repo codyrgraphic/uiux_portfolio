@@ -1,0 +1,90 @@
+section h1 .highlight {
+  position: relative;
+  display: block;
+  display: inline-block;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  color: transparent;
+  background-image: var(--token-color-surface-multi);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 100%;
+  background-position: 50% 50%;
+}
+
+.section h1 .highlight::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: inherit;
+  font-weight: var(--font-weight-medium);
+  line-height: inherit;
+  color: transparent;
+  background-image: var(--token-color-surface-multi);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: blur(5px);
+  opacity: 0.5;
+  background-size: inherit;
+  background-position: inherit;
+  transform: translateY(3px) scale(0.95);
+  transition: transform 2s;
+}
+
+.section h1 {
+  font-weight: var(--font-weight-book);
+}
+
+.section p .highlight {
+  font-weight: var(--font-weight-book);
+  color: var(--token-color-text-a);
+}
+
+.input-section {
+  label {
+    font-size: 1.2rem;
+    color: var(--token-color-text-a);
+    font-weight: var(--font-weight-medium);
+  }
+  .label-error {
+    color: var(--token-color-text-bad-a);
+  }
+}
+input {
+  font-weight: var(--font-weight-light);
+  font-size: 0.9375rem;
+  color: var(--token-color-text-a);
+}
+
+input::placeholder {
+  color: var(--token-color-text-b);
+  font-weight: var(--font-weight-light);
+}
+
+.input-error {
+  color: var(--token-color-text-bad-a);
+}
+
+.input-error::placeholder {
+  color: var(--token-color-text-bad-b);
+}
+
+textarea {
+  font-weight: var(--font-weight-light);
+  line-height: 1.6;
+  color: var(--token-color-text-a);
+  font-size: 0.9375rem;
+}
+
+textarea::placeholder {
+  color: var(--token-color-text-b);
+  font-weight: var(--font-weight-light);
+}
+
+.error-message {
+  color: var(--token-color-text-bad-a);
+  font-size: 0.8rem;
+  display: none;
+}
