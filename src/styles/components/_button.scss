@@ -1,46 +1,47 @@
 .button {
-  @include font-gotham;
-  padding-left: var(--spacing-xl);
-  padding-right: var(--spacing-xl);
-  height: var(--spacing-btn);
+  @extend .px-xl;
+  @extend .h-btn;
+  @extend .flex;
+  @extend .ali-center;
+  @extend .jus-center;
   min-height: var(--spacing-btn);
-  width: auto;
-  border-radius: var(--corner-l);
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .corner-l;
+  @extend .corner-l;
+  min-width: fit-content;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
-  background-color: var(--token-color-surface-b);
-  color: var(--token-color-text-a);
-  font-size: var(--font-size-l);
-  font-weight: var(--font-weight-medium);
-
-  &:hover {
-    background-color: var(--token-color-surface-c);
-  }
-
-  &:active,
-  &.pressed {
-    transform: scale(0.97);
-    color: var(--token-color-text-b);
-    background-color: var(--token-color-surface-b); // Adjust color as needed
-  }
+  @extend .text-l;
+  @extend .text-color-a;
 
   // Primary style
   &--primary {
+    border: none;
+    @extend .weight-medium;
     background-color: var(--token-color-surface-b);
+    &:hover {
+      background-color: var(--token-color-surface-c);
+    }
+    &:active,
+    &.pressed {
+      transform: scale(0.97);
+      color: var(--token-color-text-b);
+      background-color: var(--token-color-surface-b); // Adjust color as needed
+    }
   }
 
   // Secondary style
   &--secondary {
+    @extend .border-m-b;
     background-color: transparent;
-    border: 1px solid var(--token-color-border-a);
   }
 
   // Tertiary style
   &--tertiary {
+    border: none;
+    @extend .weight-book;
+    &:hover {
+      @extend .text-color-a;
+    }
     height: fit-content;
     background-color: transparent;
     padding: 0;

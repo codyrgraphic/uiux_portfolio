@@ -1,6 +1,6 @@
 {
   "name": "uiux-folio",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "sass": "^1.77.1",
-    "vite": "^5.2.11"
+    "vite": "^5.2.11",
+    "vite-imagetools": "^7.0.2"
   },
   "dependencies": {
     "chokidar": "^3.6.0"

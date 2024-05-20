@@ -10,7 +10,6 @@
     <meta name="keywords" content="add, your, keywords, here" />
     <meta name="author" content="Cody Roberts" />
     <title>codyr.co</title>
-    <script type="module" src="js/main.js" defer></script>
     <script type="module" src="js/button-interactions.js" defer></script>
     <script type="module" src="js/device-checker.js" defer></script>
     <script type="module" src="js/email-form-states.js" defer></script>
@@ -19,6 +18,8 @@
     <script type="module" src="js/menu-toggle.js" defer></script>
     <script type="module" src="js/message-field-auto-expand.js" defer></script>
     <script type="module" src="js/resize-transition.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/image-imports.js" defer></script>
   </head>
   <body>
     <header>
@@ -36,48 +37,132 @@
       </ul>
     </nav>
 
-    <section id="intro" class="section">
-      <h1>
+    <section id="intro" class="section h-auto-sm pt-5xl-sm h-full-vh">
+      <h1 class="weight-book">
         Transforming ideas into
         <span class="highlight" data-text="exceptional digital experiences"
           >exceptional digital experiences</span
         >
       </h1>
 
-      <p>
-        I'm Cody Roberts, a UI/UX designer with a passion for problem-solving
-        through design.
+      <p class="text-color-b">
+        I'm <a href="#about" class="text-color-a">Cody Roberts</a>, a UI/UX
+        designer with a passion for problem-solving through design.
       </p>
-      <button class="button button--primary" onclick="location.href='#contact'">
-        Get in touch
-      </button>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <div class="project-label">Project 1</div>
+      <div class="flex flex-row gap-s flex-wrap-sm w-auto w-full-sm">
+        <button
+          class="button button--primary w-auto w-full-sm"
+          onclick="location.href='#projects'"
+        >
+          See projects
+        </button>
+        <button
+          class="button button--secondary w-auto w-full-sm"
+          onclick="location.href='#contact'"
+        >
+          Get in touch
+        </button>
       </div>
-      <div class="project">
-        <div class="project-label">Project 2</div>
-      </div>
-      <div class="project">
-        <div class="project-label">Project 3</div>
-      </div>
-      <div class="clearfix"></div>
     </section>
 
     <section id="about" class="section">
-      <h2>About</h2>
+      <div class="flex flex-row gap-xl flex-column-sm">
+        <picture>
+          <source
+            srcset="
+              /assets/images/codyroberts.webp?width=480&format=webp   480w,
+              /assets/images/codyroberts.webp?width=720&format=webp   720w,
+              /assets/images/codyroberts.webp?width=1080&format=webp 1080w
+            "
+            sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              /assets/images/codyroberts.png?width=480&format=png   480w,
+              /assets/images/codyroberts.png?width=720&format=png   720w,
+              /assets/images/codyroberts.png?width=1080&format=png 1080w
+            "
+            sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px"
+            type="image/png"
+          />
+          <img
+            class="w-4xl"
+            src="/assets/images/codyroberts.png?width=1080"
+            srcset="
+              /assets/images/codyroberts.png?width=480   480w,
+              /assets/images/codyroberts.png?width=720   720w,
+              /assets/images/codyroberts.png?width=1080 1080w
+            "
+            sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px"
+            alt="Cody Roberts, a professional developer and designer"
+            loading="lazy"
+          />
+        </picture>
+        <div class="flex flex-column gap-xl">
+          <div class="flex flex-column gap-3xs">
+            <h2>Hi, I'm Cody</h2>
+            <p class="text-s text-color-b">
+              A UI/UX designer with a passion for problem-solving through
+              design.
+            </p>
+          </div>
+          <div class="flex flex-column gap-s">
+            <p>
+              I am a visual specialist with an obsession for creative
+              problem-solving. I have professional experience as a Photographer,
+              a Graphic Designer and a 3D artist.
+            </p>
+            <p>
+              I have since discovered the world of UI UX design, and now have 3+
+              years of experience in delivering comprehensive design solutions
+              from concept to production for web & mobile.
+            </p>
+            <p>
+              Specialising in visual design, I’m passionate about crafting
+              engaging, intuitive digital experiences that connect with users.
+            </p>
+          </div>
+          <button
+            class="button gap-s button--tertiary text-color-b button--auto-width"
+            onclick="location.href=''"
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 6 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.7"
+                d="M4.25 2.56699C4.58333 2.75944 4.58333 3.24056 4.25 3.43301L1.25 5.16506C0.916667 5.35751 0.5 5.11695 0.5 4.73205L0.5 1.26795C0.5 0.883049 0.916667 0.642487 1.25 0.834937L4.25 2.56699Z"
+                fill="white"
+                fill-opacity="0.5"
+              />
+            </svg>
+            Learn More
+          </button>
+        </div>
+      </div>
     </section>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="flex flex-column gap-m"></div>
+      <div class="corner-3xl" style="overflow: hidden">
+        <div id="project-2"></div>
+      </div>
 
-    <section id="contact" class="section">
+      <div id="project-1"></div>
+    </section>
+    <section id="contact" class="section pb-5xl">
       <h1>Get in touch</h1>
 
       <div class="flex flex-column gap-l ali-start">
         <p>
-          <span> Discuss a project, collaborate or just</span
-          ><span class="highlight"> say hello.</span>
+          <span class="text-color-b">
+            Discuss a project, collaborate or just</span
+          ><span> say hello.</span>
         </p>
 
         <div class="contact-icons">
@@ -147,7 +232,7 @@
       >
         <div class="input-section">
           <label for="email">
-            <div class="top">
+            <div class="flex flex-row jus-between ali-center w-full">
               <span>Email *</span>
               <p id="email-error" class="error-message">
                 Invalid email, try another

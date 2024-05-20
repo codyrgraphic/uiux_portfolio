@@ -1,19 +1,75 @@
-// Padding Utilities
-@each $name,
-  $size
-    in (
-      3xs: 2px,
-      2xs: 4px,
-      xs: 6px,
-      s: 8px,
-      m: 12px,
-      l: 16px,
-      xl: 24px,
-      2xl: 36px,
-      3xl: 64px,
-      4xl: 80px
-    )
-{
+// Define size variables
+$spacing-sizes: (
+  3xs: var(--spacing-3xs),
+  2xs: var(--spacing-2xs),
+  xs: var(--spacing-xs),
+  s: var(--spacing-s),
+  m: var(--spacing-m),
+  l: var(--spacing-l),
+  xl: var(--spacing-xl),
+  2xl: var(--spacing-2xl),
+  3xl: var(--spacing-3xl),
+  4xl: var(--spacing-4xl),
+  5xl: var(--spacing-5xl),
+  btn: var(--spacing-btn),
+  text-input: var(--spacing-text-input),
+  header: var(--spacing-header),
+  auto: auto,
+);
+
+$percentage-sizes: (
+  full: 100%,
+  full-vh: 100vh,
+  full-vw: 100vw,
+  half: 50%,
+  third: 33.3333%,
+  quarter: 25%,
+);
+
+// Generate width and height utilities
+@each $name, $size in $spacing-sizes {
+  .w-#{$name} {
+    width: $size;
+  }
+  .h-#{$name} {
+    height: $size;
+  }
+}
+
+// Generate percentage-based width and height utilities
+@each $name, $percentage in $percentage-sizes {
+  .w-#{$name} {
+    width: $percentage;
+  }
+  .h-#{$name} {
+    height: $percentage;
+  }
+}
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .w-full-sm {
+    width: 100%;
+  }
+  .w-full-vh-sm {
+    width: 100vw;
+  }
+  .w-auto-sm {
+    width: auto;
+  }
+  .h-full-sm {
+    height: 100%;
+  }
+  .h-full-vh-sm {
+    height: 100vh;
+  }
+  .h-auto-sm {
+    height: auto;
+  }
+}
+
+// Generate padding utilities
+@each $name, $size in $spacing-sizes {
   .p-#{$name} {
     padding: $size;
   }
@@ -39,20 +95,49 @@
   }
 }
 
+// Generate responsive padding utilities for small screens
+@media (max-width: 768px) {
+  @each $name, $size in $spacing-sizes {
+    .p-#{$name}-sm {
+      padding: $size;
+    }
+    .pt-#{$name}-sm {
+      padding-top: $size;
+    }
+    .pr-#{$name}-sm {
+      padding-right: $size;
+    }
+    .pb-#{$name}-sm {
+      padding-bottom: $size;
+    }
+    .pl-#{$name}-sm {
+      padding-left: $size;
+    }
+    .px-#{$name}-sm {
+      padding-left: $size;
+      padding-right: $size;
+    }
+    .py-#{$name}-sm {
+      padding-top: $size;
+      padding-bottom: $size;
+    }
+  }
+}
+
 // Margin Utilities
 @each $name,
   $size
     in (
-      3xs: 2px,
-      2xs: 4px,
-      xs: 6px,
-      s: 8px,
-      m: 12px,
-      l: 16px,
-      xl: 24px,
-      2xl: 36px,
-      3xl: 64px,
-      4xl: 80px
+      3xs: var(--spacing-3xs),
+      2xs: var(--spacing-2xs),
+      xs: var(--spacing-xs),
+      s: var(--spacing-s),
+      m: var(--spacing-m),
+      l: var(--spacing-l),
+      xl: var(--spacing-xl),
+      2xl: var(--spacing-2xl),
+      3xl: var(--spacing-3xl),
+      4xl: var(--spacing-4xl)
     )
 {
   .m-#{$name} {
@@ -81,9 +166,74 @@
 }
 
 // Gap Utilities
-@each $name, $size in (s: 8px, m: 12px, l: 16px, xl: 24px, 2xl: 36px) {
+@each $name,
+  $size
+    in (
+      3xs: var(--spacing-3xs),
+      2xs: var(--spacing-2xs),
+      xs: var(--spacing-xs),
+      s: var(--spacing-s),
+      m: var(--spacing-m),
+      l: var(--spacing-l),
+      xl: var(--spacing-xl),
+      2xl: var(--spacing-2xl),
+      3xl: var(--spacing-3xl),
+      4xl: var(--spacing-4xl)
+    )
+{
   .gap-#{$name} {
     gap: $size;
+  }
+}
+
+// Border Color Utilities
+@each $name,
+  $color
+    in (
+      a: var(--token-color-border-a),
+      b: var(--token-color-border-b),
+      bad: var(--token-color-border-bad)
+    )
+{
+  .border-color-#{$name} {
+    border-color: $color;
+  }
+}
+
+// Border Width Utilities
+@each $name,
+  $width
+    in (
+      s: var(--border-width-s),
+      m: var(--border-width-m),
+      l: var(--border-width-l)
+    )
+{
+  .border-width-#{$name} {
+    border-width: $width;
+  }
+}
+
+// Border Utilities
+@each $name,
+  $width
+    in (
+      s: var(--border-width-s),
+      m: var(--border-width-m),
+      l: var(--border-width-l)
+    )
+{
+  @each $color-name,
+    $color
+      in (
+        a: var(--token-color-border-a),
+        b: var(--token-color-border-b),
+        bad: var(--token-color-border-bad)
+      )
+  {
+    .border-#{$name}-#{$color-name} {
+      border: $width solid $color;
+    }
   }
 }
 
@@ -111,6 +261,31 @@
 }
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+// Responsive Flex  Utilities
+.flex-sm {
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.flex-wrap-sm {
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-column-sm {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.flex-row-sm {
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 // Flexbox alignment

@@ -10,6 +10,7 @@
   --spacing-2xl: 36px;
   --spacing-3xl: 64px;
   --spacing-4xl: 80px;
+  --spacing-5xl: 160px;
   --spacing-btn: 64px;
   --spacing-text-input: 46px;
   --spacing-header: 100px;
@@ -37,7 +38,7 @@
   --color-red-t100: #ff00004d;
   --color-green-s100: #14ff00;
   --color-blue-s100: #0071a4;
-  --color-multi-s100: url(/../assets/images/multi-s100.webp);
+  --color-multi-s100: url(/assets/images/multi-s100.webp);
 
   // Color Tokens
   --token-color-surface-a: var(--color-grey-s300);
@@ -61,18 +62,23 @@
 
   // Font size tokens
   --font-size-root: 16px; // Base font size for the document
-  --font-size-2xs: 0.75rem;
-  --font-size-xs: 0.75rem;
-  --font-size-s: 0.875rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.2rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 1.75rem;
-  --font-size-3xl: 2rem;
-  --font-size-4xl: 2.5rem;
+  --font-size-2xs: 0.75rem; // 12px
+  --font-size-xs: 0.75rem; // 12px
+  --font-size-s: 0.875rem; // 14px
+  --font-size-m: 1rem; // 16px
+  --font-size-l: 1.2rem; // 19.2px
+  --font-size-xl: 1.5rem; // 24px
+  --font-size-2xl: 1.75rem; // 28px
+  --font-size-3xl: 2rem; // 32px
+  --font-size-4xl: 2.5rem; // 40px
 
   // Font weights
   --font-weight-light: 100;
   --font-weight-book: 300;
   --font-weight-medium: 500;
+
+  // Border Width Tokens
+  --border-width-s: 0.5px;
+  --border-width-m: 1px;
+  --border-width-l: 2px;
 }

@@ -1,0 +1,93 @@
+// Font Size Utilities
+@each $name,
+  $size
+    in (
+      2xs: var(--font-size-2xs),
+      xs: var(--font-size-xs),
+      s: var(--font-size-s),
+      m: var(--font-size-m),
+      l: var(--font-size-l),
+      xl: var(--font-size-xl),
+      2xl: var(--font-size-2xl),
+      3xl: var(--font-size-3xl),
+      4xl: var(--font-size-4xl)
+    )
+{
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
+// Font Weight Utilities
+@each $name,
+  $weight
+    in (
+      light: var(--font-weight-light),
+      book: var(--font-weight-book),
+      medium: var(--font-weight-medium)
+    )
+{
+  .weight-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+// Text Color Utilities
+@each $name,
+  $color
+    in (
+      a: var(--token-color-text-a),
+      b: var(--token-color-text-b),
+      bad-a: var(--token-color-text-bad-a),
+      bad-b: var(--token-color-text-bad-b)
+    )
+{
+  .text-color-#{$name} {
+    color: $color;
+  }
+}
+
+// Text Alignment Utilities
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.text-left-sm {
+  @media (max-width: 600px) {
+    text-align: left;
+  }
+}
+.text-center-sm {
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+}
+.text-right-sm {
+  @media (max-width: 600px) {
+    text-align: right;
+  }
+}
+.text-justify-sm {
+  @media (max-width: 600px) {
+    text-align: justify;
+  }
+}
+
+// Text Transformation Utilities
+@each $name,
+  $transform
+    in (uppercase: uppercase, lowercase: lowercase, capitalize: capitalize)
+{
+  .text-transform-#{$name} {
+    text-transform: $transform;
+  }
+}

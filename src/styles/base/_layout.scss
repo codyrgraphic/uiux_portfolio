@@ -1,83 +1,61 @@
 .section {
-  display: flex;
-  height: auto;
-  max-height: 91200px;
+  @extend .flex;
+  @extend .px-3xl;
+  @extend .py-3xl;
+  @extend .gap-2xl;
+  @extend .flex-column;
+  @extend .jus-center;
+  @extend .ali-baseline;
+  @extend .w-full;
   min-height: 640px;
-  padding-left: var(--spacing-2xl);
-  padding-right: var(--spacing-2xl);
-  gap: var(--spacing-2xl);
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  width: 100%;
   max-width: 1200px;
-
-  @media (max-width: 768px) {
-    padding-top: calc(var(--spacing-header) + var(--spacing-xl));
-    padding-bottom: var(--spacing-4xl);
-    height: auto;
-  }
-
-  .input-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-s);
-    width: 100%;
-  }
+  @extend .px-xl-sm;
 }
 
-#intro {
-  height: 100vh;
-  @media (max-width: 768px) {
-    padding-top: calc(var(--spacing-header) + var(--spacing-xl));
-    height: auto;
-  }
-}
-
-#contact {
-  padding-bottom: var(--spacing-4xl);
-  @media (max-width: 768px) {
-    padding-top: calc(var(--spacing-header) + var(--spacing-xl));
-    height: auto;
-  }
+.input-section {
+  @extend .flex-column;
+  @extend .gap-3xs;
+  @extend .w-full;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-l);
-
-  width: 100%;
+  @extend .flex;
+  @extend .flex-column;
+  @extend .gap-l;
+  @extend .w-full;
   max-width: 600px;
 }
 
 input {
-  padding: var(--spacing-m) var(--spacing-s);
-  align-items: center;
-  width: 100%;
+  @extend .py-m;
+  @extend .px-s;
+  @extend .ali-center;
+  @extend .w-full;
+  @extend .corner-m;
+  @extend .border-m-b;
   box-sizing: border-box;
-  border-radius: var(--corner-m);
-  border: 0.5px solid var(--token-color-border-b);
   background-color: transparent;
+
   &:focus {
     outline: none;
   }
 }
 
 input-error {
-  color: var(--token-color-text-bad-a);
+  @extend .text-color-bad-a;
 }
 
 textarea {
   min-height: 120px;
   resize: none;
-  padding: var(--spacing-m) var(--spacing-s);
-  align-items: center;
-  width: 100%;
+  @extend .py-m;
+  @extend .px-s;
+  @extend .ali-center;
+  @extend .w-full;
+  @extend .corner-m;
+  @extend .border-m-b;
   overflow: hidden;
   box-sizing: border-box;
-  border-radius: var(--corner-m);
-  border: 0.5px solid var(--token-color-border-b);
   background-color: transparent;
   &:focus {
     outline: none;
@@ -85,16 +63,14 @@ textarea {
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-s);
+  @extend .flex-column;
+  @extend .ali-start;
+  @extend .gap-s;
 
   .top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    @extend .flex-row;
+    @extend .jus-between;
+    @extend .ali-center;
+    @extend .w-full;
   }
 }

@@ -2,7 +2,7 @@ section h1 .highlight {
   position: relative;
   display: block;
   display: inline-block;
-  font-weight: var(--font-weight-medium);
+  @extend .weight-medium;
   line-height: 1.2;
   color: transparent;
   background-image: var(--token-color-surface-multi);
@@ -10,6 +10,10 @@ section h1 .highlight {
   background-clip: text;
   background-size: 100%;
   background-position: 50% 50%;
+  &:hover {
+    transform: scale(1.005);
+    transition: transform 500ms;
+  }
 }
 
 .section h1 .highlight::before {
@@ -30,61 +34,52 @@ section h1 .highlight {
   background-size: inherit;
   background-position: inherit;
   transform: translateY(3px) scale(0.95);
-  transition: transform 2s;
-}
-
-.section h1 {
-  font-weight: var(--font-weight-book);
-}
-
-.section p .highlight {
-  font-weight: var(--font-weight-book);
-  color: var(--token-color-text-a);
 }
 
 .input-section {
   label {
-    font-size: 1.2rem;
-    color: var(--token-color-text-a);
-    font-weight: var(--font-weight-medium);
+    @extend .text-m;
+    @extend .text-color-a;
+    @extend .weight-medium;
   }
   .label-error {
-    color: var(--token-color-text-bad-a);
+    @extend .text-color-bad-a;
   }
 }
+
 input {
-  font-weight: var(--font-weight-light);
-  font-size: 0.9375rem;
-  color: var(--token-color-text-a);
+  @extend .weight-light;
+  @extend .text-s;
+  @extend .text-color-a;
 }
 
 input::placeholder {
-  color: var(--token-color-text-b);
-  font-weight: var(--font-weight-light);
+  @extend .text-color-b;
+  @extend .weight-light;
 }
 
 .input-error {
-  color: var(--token-color-text-bad-a);
+  @extend .text-color-bad-a;
 }
 
 .input-error::placeholder {
-  color: var(--token-color-text-bad-b);
+  @extend .text-color-bad-b;
 }
 
 textarea {
-  font-weight: var(--font-weight-light);
+  @extend .weight-light;
   line-height: 1.6;
-  color: var(--token-color-text-a);
-  font-size: 0.9375rem;
+  @extend .text-color-a;
+  @extend .text-s;
 }
 
 textarea::placeholder {
-  color: var(--token-color-text-b);
-  font-weight: var(--font-weight-light);
+  @extend .text-color-b;
+  @extend .weight-light;
 }
 
 .error-message {
-  color: var(--token-color-text-bad-a);
-  font-size: 0.8rem;
+  @extend .text-color-bad-a;
+  @extend .text-xs;
   display: none;
 }
