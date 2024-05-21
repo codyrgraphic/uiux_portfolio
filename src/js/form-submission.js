@@ -1,7 +1,12 @@
+import { toast, AUTO_HIDE, PERSISTENT } from './toast.js';
+import { validateEmail } from './email-form-states.js';
+import { updateSubject } from './email-subject.js';
+
+document.getElementById('contact-form').removeEventListener('submit', handleFormSubmit);
 document.getElementById('contact-form').addEventListener('submit', handleFormSubmit);
 
 async function handleFormSubmit(event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   if (!validateEmail(event)) {
     return;
@@ -20,26 +25,19 @@ async function handleFormSubmit(event) {
       }
     });
 
+
+
     if (response.ok) {
-      showToast('Message sent!');
+
+      toast.showToast('Message sent!', AUTO_HIDE); 
       form.reset();
     } else {
+
       throw new Error('Form submission failed');
     }
   } catch (error) {
-    showToast('Message failed');
+
+    toast.showToast('Message failed', PERSISTENT); 
     console.error(error);
   }
-}
-
-function showToast(message) {
-  const toast = document.getElementById('toast');
-  const toastMessage = document.getElementById('toast-message');
-  toastMessage.textContent = message;
-  toast.style.display = 'flex';
-
-}
-
-function hideToast() {
-  document.getElementById('toast').style.display = 'none';
 }

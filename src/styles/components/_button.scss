@@ -1,60 +1,73 @@
-.button {
+// Button base styles
+.btn {
   @extend .px-xl;
   @extend .h-btn;
   @extend .flex;
   @extend .ali-center;
   @extend .jus-center;
   min-height: var(--spacing-btn);
-  @extend .corner-l;
-  @extend .corner-l;
   min-width: fit-content;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
   @extend .text-l;
   @extend .text-color-a;
+  @extend .corner-l;
+}
 
-  // Primary style
-  &--primary {
-    border: none;
-    @extend .weight-medium;
+// Button variants
+.primary {
+  @extend .btn;
+  border: none;
+  @extend .weight-medium;
+  background-color: var(--token-color-surface-b);
+  &:hover {
+    background-color: var(--token-color-surface-c);
+  }
+  &:active,
+  &.pressed {
+    transform: scale(0.97);
+    color: var(--token-color-text-b);
     background-color: var(--token-color-surface-b);
-    &:hover {
-      background-color: var(--token-color-surface-c);
-    }
-    &:active,
-    &.pressed {
-      transform: scale(0.97);
-      color: var(--token-color-text-b);
-      background-color: var(--token-color-surface-b); // Adjust color as needed
-    }
   }
+}
 
-  // Secondary style
-  &--secondary {
-    @extend .border-m-b;
-    background-color: transparent;
+.secondary {
+  @extend .btn;
+  background-color: transparent;
+  @extend .border-m-b;
+  &:hover {
+    background-color: var(--token-color-surface-d);
   }
+  &:active,
+  &.pressed {
+    transform: scale(0.97);
+    color: var(--token-color-text-b);
+  }
+}
 
-  // Tertiary style
-  &--tertiary {
-    border: none;
-    @extend .weight-book;
-    &:hover {
-      @extend .text-color-a;
-    }
-    height: fit-content;
-    background-color: transparent;
-    padding: 0;
+.tertiary {
+  @extend .btn;
+  border: none;
+  height: fit-content;
+  background-color: transparent;
+  padding: 0;
+  @extend .weight-book;
+  &:hover {
+    @extend .text-color-a;
   }
+  &:active,
+  &.pressed {
+    transform: scale(0.97);
+    color: var(--token-color-text-b);
+  }
+}
 
-  // Full-width modifier
-  &--full-width {
-    width: 100%;
-  }
+// Full-width and auto-width modifiers
+.btn-w-full {
+  width: 100%;
+}
 
-  // Auto-width modifier
-  &--auto-width {
-    width: auto;
-    max-width: fit-content;
-  }
+.btn-w-auto {
+  width: auto;
+  max-width: fit-content;
 }

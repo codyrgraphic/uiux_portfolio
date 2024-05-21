@@ -1,10 +1,10 @@
-document.getElementById('contact-form').addEventListener('submit', validateEmail);
 
-function validateEmail(event) {
+export function validateEmail(event) {
   const emailInput = document.getElementById('email');
   const errorSpan = document.getElementById('email-error');
   const emailLabel = document.querySelector('label[for="email"]');
   let isValid = true;
+
 
   // Check if the email field is empty
   if (!emailInput.value) {
@@ -35,7 +35,7 @@ function validateEmail(event) {
   emailInput.addEventListener('animationend', () => {
     emailInput.classList.remove('jiggle');
   });
-  
+
   return isValid;
 }
 

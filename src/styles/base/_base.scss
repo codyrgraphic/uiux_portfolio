@@ -8,20 +8,18 @@ body {
   scrollbar-width: none; // Firefox
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @extend .flex-column;
+  @extend .ali-center;
+  font-family: "Gotham", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--token-color-text-a);
+  background-color: var(--token-color-surface-a);
 }
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  @extend .flex-column;
-  @extend .ali-start;
-
-  @extend .ali-center;
-  font-family: "Gotham", Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--token-color-text-a);
-  background-color: var(--token-color-surface-a);
 }
 
 h1,
