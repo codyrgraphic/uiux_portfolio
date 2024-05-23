@@ -1,32 +1,4 @@
-// Define size variables
-$spacing-sizes: (
-  3xs: var(--spacing-3xs),
-  2xs: var(--spacing-2xs),
-  xs: var(--spacing-xs),
-  s: var(--spacing-s),
-  m: var(--spacing-m),
-  l: var(--spacing-l),
-  xl: var(--spacing-xl),
-  2xl: var(--spacing-2xl),
-  3xl: var(--spacing-3xl),
-  4xl: var(--spacing-4xl),
-  5xl: var(--spacing-5xl),
-  btn: var(--spacing-btn),
-  text-input: var(--spacing-text-input),
-  header: var(--spacing-header),
-  auto: auto,
-);
-
-$percentage-sizes: (
-  full: 100%,
-  full-vh: 100vh,
-  full-vw: 100vw,
-  half: 50%,
-  third: 33.3333%,
-  quarter: 25%,
-);
-
-// Generate width and height utilities
+// Width & Height Utilities
 @each $name, $size in $spacing-sizes {
   .w-#{$name} {
     width: $size;
@@ -36,7 +8,18 @@ $percentage-sizes: (
   }
 }
 
-// Generate percentage-based width and height utilities
+@media (max-width: 768px) {
+  @each $name, $size in $spacing-sizes {
+    .w-#{$name}-sm {
+      width: $size;
+    }
+    .h-#{$name}-sm {
+      height: $size;
+    }
+  }
+}
+
+// Percentage-based Width & Height Utilities
 @each $name, $percentage in $percentage-sizes {
   .w-#{$name} {
     width: $percentage;
@@ -68,7 +51,7 @@ $percentage-sizes: (
   }
 }
 
-// Generate padding utilities
+// Padding Utilities
 @each $name, $size in $spacing-sizes {
   .p-#{$name} {
     padding: $size;
@@ -95,7 +78,7 @@ $percentage-sizes: (
   }
 }
 
-// Generate responsive padding utilities for small screens
+// Responsive Padding Utilities
 @media (max-width: 768px) {
   @each $name, $size in $spacing-sizes {
     .p-#{$name}-sm {
@@ -166,23 +149,18 @@ $percentage-sizes: (
 }
 
 // Gap Utilities
-@each $name,
-  $size
-    in (
-      3xs: var(--spacing-3xs),
-      2xs: var(--spacing-2xs),
-      xs: var(--spacing-xs),
-      s: var(--spacing-s),
-      m: var(--spacing-m),
-      l: var(--spacing-l),
-      xl: var(--spacing-xl),
-      2xl: var(--spacing-2xl),
-      3xl: var(--spacing-3xl),
-      4xl: var(--spacing-4xl)
-    )
-{
+@each $name, $size in $spacing-sizes {
   .gap-#{$name} {
     gap: $size;
+  }
+}
+
+// Responsive Gap Utilities
+@media (max-width: 768px) {
+  @each $name, $size in $spacing-sizes {
+    .gap-#{$name}-sm {
+      gap: $size;
+    }
   }
 }
 
@@ -238,11 +216,18 @@ $percentage-sizes: (
 }
 
 // Border Radius Utilities
-@each $name,
-  $size in (xs: 4px, s: 6px, m: 8px, l: 12px, xl: 16px, 2xl: 20px, 3xl: 24px)
-{
+@each $name, $size in $spacing-sizes {
   .corner-#{$name} {
     border-radius: $size;
+  }
+}
+
+// Responsive Border Radius Utilities
+@media (max-width: 768px) {
+  @each $name, $size in $spacing-sizes {
+    .corner-#{$name}-sm {
+      border-radius: $size;
+    }
   }
 }
 

@@ -38,12 +38,33 @@
     in (
       a: var(--token-color-text-a),
       b: var(--token-color-text-b),
+      hl-a: var(--token-color-highlight-a),
+      hl-b: var(--token-color-highlight-b),
+      hl-c: var(--token-color-highlight-c),
       bad-a: var(--token-color-text-bad-a),
       bad-b: var(--token-color-text-bad-b)
     )
 {
   .text-color-#{$name} {
+    // Default text color
     color: $color;
+
+    // Apply gradient for highlight-b
+    @if $color ==
+      var(--token-color-highlight-b) or
+      $color ==
+      var(--token-color-highlight-a) or
+      $color ==
+      var(--token-color-highlight-c)
+    {
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-image: $color;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 
@@ -90,4 +111,19 @@
   .text-transform-#{$name} {
     text-transform: $transform;
   }
+}
+
+// Dot List Utilities
+.dot-list {
+  list-style-type: disc;
+  @extend .pl-2xl;
+}
+
+.dot-list-inline > li::before {
+  content: "•";
+  margin-right: 0.5em;
+}
+
+.dot-list-inline > li {
+  display: inline;
 }

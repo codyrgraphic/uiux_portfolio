@@ -8,18 +8,15 @@ body {
   scrollbar-width: none; // Firefox
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend .flex-column;
-  @extend .ali-center;
+
   font-family: "Gotham", Arial, sans-serif;
   line-height: 1.6;
-  color: var(--token-color-text-a);
+  @extend .text-color-a;
   background-color: var(--token-color-surface-a);
 }
 
 html {
   scroll-behavior: smooth;
-}
-body {
 }
 
 h1,
@@ -28,33 +25,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-medium);
-  color: var(--token-color-text-a);
+  @extend .weight-medium;
+  @extend .text-color-a;
   line-height: 130%;
 }
 
 h1 {
-  font-size: 2.5rem;
+  @extend .text-4xl;
 }
 h2 {
-  font-size: 2rem;
+  @extend .text-3xl;
 }
 h3 {
-  font-size: 1.75rem;
+  @extend .text-2xl;
 }
 h4 {
-  font-size: 1.5rem;
+  @extend .text-xl;
 }
 h5 {
-  font-size: 1.4rem;
+  @extend .text-xl;
 }
 h6 {
-  font-size: 1.2rem;
+  @extend .text-l;
 }
 
 p {
-  font-size: 1.1rem;
-  font-weight: 300;
+  @extend .text-m;
+  @extend .weight-book;
 }
 
 ul {
@@ -62,18 +59,16 @@ ul {
 }
 
 li {
-  font-size: 1.125rem;
-  font-weight: var(--font-weight-book);
+  @extend .text-m;
+  @extend .weight-book;
 }
 
 label {
-  font-size: 1.125rem;
-  font-weight: var(--font-weight-book);
-  display: flex;
-  flex-direction: row;
+  @extend .text-l;
+  @extend .weight-book;
+  @extend .flex;
 }
 
 @mixin font-gotham {
-  font-family: "Gotham", Arial, sans-serif;
-  font-weight: 500; //
+  @extend .weight-medium;
 }

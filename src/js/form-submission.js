@@ -29,7 +29,7 @@ async function handleFormSubmit(event) {
 
     if (response.ok) {
 
-      toast.showToast('Message sent!', AUTO_HIDE); 
+      toast.showToast('Message sent!', PERSISTENT); 
       form.reset();
     } else {
 

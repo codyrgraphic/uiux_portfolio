@@ -44,13 +44,13 @@ header {
   }
   position: fixed;
   right: 0;
-
   top: var(--spacing-header);
   background: var(--token-color-surface-d);
   border-radius: 0px 0px var(--corner-l) var(--corner-l);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 11;
+  @extend .pb-l-sm;
 
   ul {
     list-style: none;
@@ -59,19 +59,26 @@ header {
   }
 
   li {
-    display: block;
     padding: 0;
     justify-items: center;
     align-items: center;
     a {
+      cursor: pointer;
       display: block;
       width: 100%;
-      @extend .px-3xl;
+      @extend .px-4xl;
       @extend .py-xl;
-      color: var(--token-color-text-a);
+      @extend .py-l-sm;
+
       text-decoration: none;
       &:hover {
-        color: var(--token-color-text-b);
+        // @extend .text-color-a;
+        @extend .scale-105;
+      }
+      &:active,
+      &.pressed {
+        @extend .scale-95;
+        @extend .text-color-b;
       }
     }
   }

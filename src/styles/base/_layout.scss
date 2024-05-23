@@ -1,15 +1,18 @@
 .section {
   @extend .flex;
-  @extend .px-3xl;
+  @extend .px-5xl;
   @extend .py-3xl;
   @extend .gap-2xl;
   @extend .flex-column;
   @extend .jus-center;
   @extend .ali-baseline;
-  @extend .w-full;
+  width: 100%;
   min-height: 640px;
   max-width: 1200px;
-  @extend .px-xl-sm;
+  @extend .px-2xl-sm;
+  align-self: center;
+  justify-self: center;
+  scroll-margin-top: 100px;
 }
 
 .input-section {
@@ -72,5 +75,16 @@ label {
     @extend .jus-between;
     @extend .ali-center;
     @extend .w-full;
+  }
+}
+
+.tools-skills-list {
+  @extend .flex;
+  @extend .flex-column;
+  @extend .gap-2xs;
+  li {
+    @extend .gap-s;
+    @extend .flex;
+    @extend .ali-center;
   }
 }

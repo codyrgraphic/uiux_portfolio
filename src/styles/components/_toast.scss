@@ -1,15 +1,17 @@
 .toast {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .flex;
+  @extend .ali-start;
+  @extend .jus-center;
   background: var(--token-color-surface-d);
-  color: var(--token-color-text-a);
-  font-weight: var(--font-weight-book);
-  font-size: var(--font-size-s);
-  text-align: center;
-  gap: var(--spacing-m);
-  border-radius: var(--corner-m);
-  padding: var(--spacing-l);
+  @extend .text-color-a;
+  @extend .weight-book;
+  @extend .text-s;
+  @extend .text-center;
+  @extend .gap-m;
+  @extend .corner-s;
+  @extend .p-l;
+  @extend .pr-2xl-sm;
+
   position: fixed;
   z-index: 1;
   cursor: pointer;
@@ -19,8 +21,6 @@
   backdrop-filter: blur(4px);
 
   &:hover {
-    transform: scale(1.05);
-    transition: 0.2s;
   }
 
   &.show {

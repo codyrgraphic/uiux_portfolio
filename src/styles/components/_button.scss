@@ -58,7 +58,7 @@
   &:active,
   &.pressed {
     transform: scale(0.97);
-    color: var(--token-color-text-b);
+    @extend .text-color-b;
   }
 }
 

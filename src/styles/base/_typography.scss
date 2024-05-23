@@ -1,39 +1,25 @@
 section h1 .highlight {
+  content: attr(data-text);
   position: relative;
   display: block;
   display: inline-block;
   @extend .weight-medium;
   line-height: 1.2;
-  color: transparent;
-  background-image: var(--token-color-surface-multi);
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-size: 100%;
-  background-position: 50% 50%;
+  @extend .text-color-hl-a;
   &:hover {
     transform: scale(1.005);
     transition: transform 500ms;
   }
 }
 
-.section h1 .highlight::before {
+h1 .highlight::before {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  font-size: inherit;
-  font-weight: var(--font-weight-medium);
-  line-height: inherit;
-  color: transparent;
-  background-image: var(--token-color-surface-multi);
-  -webkit-background-clip: text;
-  background-clip: text;
-  filter: blur(5px);
-  opacity: 0.5;
-  background-size: inherit;
-  background-position: inherit;
-  transform: translateY(3px) scale(0.95);
+  @extend .text-color-hl-a;
+  @extend .blur-4;
+  @extend .opacity-70;
+
+  transform: scale(0.99) translateY(0px);
 }
 
 .input-section {

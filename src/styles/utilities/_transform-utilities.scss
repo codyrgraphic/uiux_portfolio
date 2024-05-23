@@ -1,39 +1,25 @@
 // Scale Utilities
-@each $name,
-  $value
-    in (
-      0: 0,
-      25: 0.25,
-      50: 0.5,
-      75: 0.75,
-      100: 1,
-      125: 1.25,
-      150: 1.5,
-      175: 1.75,
-      200: 2
-    )
-{
+@each $name, $value in $scale-sizes {
   .scale-#{$name} {
     transform: scale(#{$value});
   }
 }
 
 // Transform Origin Utilities
-@each $name,
-  $value
-    in (
-      center: center,
-      top: top,
-      bottom: bottom,
-      left: left,
-      right: right,
-      "top-left": top left,
-      "top-right": top right,
-      "bottom-left": bottom left,
-      "bottom-right": bottom right
-    )
-{
+@each $name, $value in $origins {
   .origin-#{$name} {
     transform-origin: $value;
+  }
+}
+
+@each $name, $value in $spacing-sizes {
+  .translate-x-#{$name} {
+    transform: translateX(#{$value});
+  }
+  .translate-y-#{$name} {
+    transform: translateY(#{$value});
+  }
+  .translate-#{$name} {
+    transform: translate(#{$value}, #{$value});
   }
 }

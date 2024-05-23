@@ -1,0 +1,15 @@
+// Brightness Utilities
+@each $name, $value in $decimal-values {
+  .dim-#{$name} {
+    --brightness: brightness(#{$value});
+    filter: brightness(#{$value});
+  }
+}
+
+// Blur Utilities
+@each $name, $value in $blur-values {
+  .blur-#{$name} {
+    --blur: blur(#{$value});
+    filter: blur(#{$value});
+  }
+}
