@@ -1,0 +1,55 @@
+// Overflow utilities
+
+// No overflow
+.of-visible {
+  overflow: visible;
+}
+
+// Hide overflow
+.of-hidden {
+  overflow: hidden;
+}
+
+// Scroll overflow
+.of-scroll {
+  overflow: scroll;
+}
+
+// Auto overflow
+.of-auto {
+  overflow: auto;
+}
+
+// Overflow X (horizontal)
+.of-x-visible {
+  overflow-x: visible;
+}
+
+.of-x-hidden {
+  overflow-x: hidden;
+}
+
+.of-x-scroll {
+  overflow-x: scroll;
+}
+
+.of-x-auto {
+  overflow-x: auto;
+}
+
+// Overflow Y (vertical)
+.of-y-visible {
+  overflow-y: visible;
+}
+
+.of-y-hidden {
+  overflow-y: hidden;
+}
+
+.of-y-scroll {
+  overflow-y: scroll;
+}
+
+.of-y-auto {
+  overflow-y: auto;
+}

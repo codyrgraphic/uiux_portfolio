@@ -1,41 +1,24 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const learnMoreBtn = document.getElementById("learn-more-btn");
+    const collapseBtn = document.getElementById("collapse-btn");
+    const aboutB = document.getElementById("about-b");
+    const headline = document.getElementById("headline");
 
-    const aboutContent = document.getElementById("about-content");
-
-    function loadContent(url, callback) {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                aboutContent.innerHTML = data;
-                if (callback) callback();
-            })
-            .catch(error => {
-                console.error('Error loading content:', error);
-                aboutContent.innerHTML = "<p>Error loading content. Please try again later.</p>";
-            });
-    }
-    
-    function attachButtonListener(buttonId, url, callback) {
-        const button = document.getElementById(buttonId);
-        if (button) {
-            button.addEventListener("click", function() {
-                loadContent(url, callback);
-            });
+    function toggleAboutB() {
+        if (aboutB.classList.contains("h-0")) {
+            headline.textContent = "Cody Roberts";
+            aboutB.classList.remove("h-0");
+            aboutB.classList.add("h-auto", "transition-slow");
+            learnMoreBtn.classList.add("disp-none");
+            learnMoreBtn.classList.remove("disp-block");
+        } else {
+            aboutB.classList.add("h-0", "transition-slow", "of-hidden");
+            aboutB.classList.remove("h-auto");
+            learnMoreBtn.classList.remove("disp-none");
+            learnMoreBtn.classList.add("disp-block");
         }
     }
-    
-    function attachLearnMoreListener() {
-        attachButtonListener("learn-more-btn", "sections/about/about-b.html", attachCollapseListener);
-    }
-    
-    function attachCollapseListener() {
-        attachButtonListener("collapse-btn", "sections/about/about-a.html", attachLearnMoreListener);
-    }
-    
-    // Initial load
-    loadContent("sections/about/about-a.html", attachLearnMoreListener);
-    
+
+    learnMoreBtn.addEventListener("click", toggleAboutB);
+    collapseBtn.addEventListener("click", toggleAboutB);
+});

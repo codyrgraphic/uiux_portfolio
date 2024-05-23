@@ -1,0 +1,95 @@
+// Transition property utilities
+.transition-all {
+  transition-property: all;
+}
+.transition-opacity {
+  transition-property: opacity;
+}
+.transition-transform {
+  transition-property: transform;
+}
+.transition-bg {
+  transition-property: background-color;
+}
+.transition-color {
+  transition-property: color;
+}
+.transition-border {
+  transition-property: border-color;
+}
+
+// Transition duration utilities
+.transition-duration-100 {
+  transition-duration: 0.1s;
+}
+.transition-duration-200 {
+  transition-duration: 0.2s;
+}
+.transition-duration-300 {
+  transition-duration: 0.3s;
+}
+.transition-duration-500 {
+  transition-duration: 0.5s;
+}
+.transition-duration-700 {
+  transition-duration: 0.7s;
+}
+.transition-duration-1000 {
+  transition-duration: 1s;
+}
+
+// Transition timing function utilities
+.transition-ease {
+  transition-timing-function: ease;
+}
+.transition-ease-in {
+  transition-timing-function: ease-in;
+}
+.transition-ease-out {
+  transition-timing-function: ease-out;
+}
+.transition-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+.transition-linear {
+  transition-timing-function: linear;
+}
+
+// Transition delay utilities
+.transition-delay-100 {
+  transition-delay: 0.1s;
+}
+.transition-delay-200 {
+  transition-delay: 0.2s;
+}
+.transition-delay-300 {
+  transition-delay: 0.3s;
+}
+.transition-delay-500 {
+  transition-delay: 0.5s;
+}
+.transition-delay-700 {
+  transition-delay: 0.7s;
+}
+.transition-delay-1000 {
+  transition-delay: 1s;
+}
+
+// Combining common transitions
+.transition-fast {
+  @extend .transition-all;
+  @extend .transition-duration-200;
+  @extend .transition-ease;
+}
+
+.transition-medium {
+  @extend .transition-all;
+  @extend .transition-duration-500;
+  @extend .transition-ease-in-out;
+}
+
+.transition-slow {
+  @extend .transition-all;
+  @extend .transition-duration-1000;
+  @extend .transition-ease-in-out;
+}
