@@ -1,25 +1,17 @@
-section h1 .highlight {
-  content: attr(data-text);
+.highlight {
   position: relative;
   display: block;
   display: inline-block;
-  @extend .weight-medium;
-  line-height: 1.2;
   @extend .text-color-hl-a;
-  &:hover {
-    transform: scale(1.005);
-    transition: transform 500ms;
-  }
 }
 
-h1 .highlight::before {
+.highlight::before {
   content: attr(data-text);
   position: absolute;
   @extend .text-color-hl-a;
-  @extend .blur-4;
-  @extend .opacity-70;
-
-  transform: scale(0.99) translateY(0px);
+  @extend .blur-7;
+  @extend .opacity-40;
+  transform: scale(0.97) translateY(3%);
 }
 
 .input-section {

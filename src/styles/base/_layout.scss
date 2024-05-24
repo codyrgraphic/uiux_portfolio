@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 640px;
   max-width: 1200px;
-  @extend .px-2xl-sm;
+  @extend .px-xl-sm;
   align-self: center;
   justify-self: center;
   scroll-margin-top: 100px;
@@ -34,7 +34,7 @@ input {
   @extend .px-s;
   @extend .ali-center;
   @extend .w-full;
-  @extend .corner-m;
+  @extend .corner-s;
   @extend .border-m-b;
   box-sizing: border-box;
   background-color: transparent;
@@ -55,7 +55,7 @@ textarea {
   @extend .px-s;
   @extend .ali-center;
   @extend .w-full;
-  @extend .corner-m;
+  @extend .corner-s;
   @extend .border-m-b;
   overflow: hidden;
   box-sizing: border-box;

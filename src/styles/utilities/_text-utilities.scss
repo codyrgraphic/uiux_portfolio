@@ -49,21 +49,40 @@
     // Default text color
     color: $color;
 
-    // Apply gradient for highlight-b
-    @if $color ==
-      var(--token-color-highlight-b) or
-      $color ==
-      var(--token-color-highlight-a) or
-      $color ==
-      var(--token-color-highlight-c)
-    {
-      background-size: 100%;
+    // Apply gradient for highlight-a
+    @if $color == var(--token-color-highlight-a) {
+      background-size: 140% 140%;
       background-position: 50% 50%;
       background-image: $color;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       -webkit-text-fill-color: transparent;
+      -webkit-filter: saturate(1.4) brightness(1.7) hue-rotate(10deg);
+    }
+
+    // Apply gradient for highlight-b
+    @if $color == var(--token-color-highlight-b) {
+      background-size: 140% 140%;
+      background-position: 50% 50%;
+      background-image: $color;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-filter: saturate(1.4);
+    }
+
+    // Apply gradient for highlight-c
+    @if $color == var(--token-color-highlight-c) {
+      background-size: 140% 140%;
+      background-position: 50% 50%;
+      background-image: $color;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-filter: saturate(1.4);
     }
   }
 }

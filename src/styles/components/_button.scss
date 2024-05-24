@@ -8,10 +8,10 @@
   min-height: var(--spacing-btn);
   min-width: fit-content;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
   @extend .text-l;
   @extend .text-color-a;
-  @extend .corner-l;
+  @extend .corner-m;
+  transition: background-color 0.2s;
 }
 
 // Button variants
@@ -20,13 +20,16 @@
   border: none;
   @extend .weight-medium;
   background-color: var(--token-color-surface-b);
+  &:hover span {
+    @extend .highlight;
+  }
+
   &:hover {
     background-color: var(--token-color-surface-c);
   }
   &:active,
   &.pressed {
     transform: scale(0.97);
-    color: var(--token-color-text-b);
     background-color: var(--token-color-surface-b);
   }
 }
@@ -35,6 +38,9 @@
   @extend .btn;
   background-color: transparent;
   @extend .border-m-b;
+  &:hover span {
+    @extend .highlight;
+  }
   &:hover {
     background-color: var(--token-color-surface-d);
   }
@@ -52,13 +58,14 @@
   background-color: transparent;
   padding: 0;
   @extend .weight-book;
+  &:hover span {
+    @extend .highlight;
+  }
   &:hover {
-    @extend .text-color-a;
   }
   &:active,
   &.pressed {
     transform: scale(0.97);
-    @extend .text-color-b;
   }
 }
 
