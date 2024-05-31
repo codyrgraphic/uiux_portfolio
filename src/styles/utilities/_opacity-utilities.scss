@@ -1,6 +1,0 @@
-// Opacity Utilities
-@each $name, $value in $decimal-values {
-  .opacity-#{$name} {
-    opacity: #{$value};
-  }
-}

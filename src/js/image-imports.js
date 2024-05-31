@@ -1,9 +1,9 @@
 // Project-1 - Narai
-import srcsetwebp1 from '/assets/images/project-1.png?w=500;700;900;1200&format=webp&as=srcset'
-import srcsetpng1 from '/assets/images/project-1.png?w=500;700;900;1200&format=png&as=srcset'
-import { src as placeholder1 } from '/assets/images/project-1.png?w=100&as=metadata'
+import srcsetwebp1 from "/assets/images/project-1.png?w=500;700;900;1200&format=webp&as=srcset";
+import srcsetpng1 from "/assets/images/project-1.png?w=500;700;900;1200&format=png&as=srcset";
+import { src as placeholder1 } from "/assets/images/project-1.png?w=100&as=metadata";
 
-const project1Element = document.querySelector('#project-1');
+const project1Element = document.querySelector("#project-1");
 if (project1Element) {
   project1Element.innerHTML = `
     <picture>
@@ -13,18 +13,18 @@ if (project1Element) {
           src="${placeholder1}"
           sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loading="lazy"
-          class="w-full w-full scale-110"
+          class="w-full scale-110"
           alt="A thumbnail of a japanese study app"/>
     </picture>
   `;
 }
 
 // Project-2 - UseVerb
-import srcsetwebp2 from '/assets/images/project-2.png?w=500;700;900;1200&format=webp&as=srcset'
-import srcsetpng2 from '/assets/images/project-2.png?w=500;700;900;1200&format=png&as=srcset'
-import { src as placeholder2 } from '/assets/images/project-2.png?w=100&as=metadata'
+import srcsetwebp2 from "/assets/images/project-2.png?w=500;700;900;1200&format=webp&as=srcset";
+import srcsetpng2 from "/assets/images/project-2.png?w=500;700;900;1200&format=png&as=srcset";
+import { src as placeholder2 } from "/assets/images/project-2.png?w=100&as=metadata";
 
-const project2Element = document.querySelector('#project-2');
+const project2Element = document.querySelector("#project-2");
 if (project2Element) {
   project2Element.innerHTML = `
     <picture>
@@ -41,11 +41,11 @@ if (project2Element) {
 }
 
 // Elements-1
-import elements1srcsetwebp from '/assets/images/elements-1.webp?w=128&format=webp&as=srcset'
-import elements1srcsetpng from '/assets/images/elements-1.png?w=128&format=png&as=srcset'
-import { src as elements1placeholder } from '/assets/images/elements-1.png?w=128&as=metadata'
+import elements1srcsetwebp from "/assets/images/elements-1.webp?w=128&format=webp&as=srcset";
+import elements1srcsetpng from "/assets/images/elements-1.png?w=128&format=png&as=srcset";
+import { src as elements1placeholder } from "/assets/images/elements-1.png?w=128&as=metadata";
 
-const elements1Element = document.querySelector('#elements-1');
+const elements1Element = document.querySelector("#elements-1");
 if (elements1Element) {
   elements1Element.innerHTML = `
     <picture>
@@ -61,11 +61,13 @@ if (elements1Element) {
 }
 
 // Cody Roberts Photo
-import codyrobertsphotosrcsetwebp from '/assets/images/cody-roberts-ui-ux-designer-photo.webp?w=256&format=webp&as=srcset'
-import codyrobertsphotosrcsetpng from '/assets/images/cody-roberts-ui-ux-designer-photo.png?w=256&format=png&as=srcset'
-import { src as codyrobertsphotoplaceholder } from '/assets/images/cody-roberts-ui-ux-designer-photo.png?w=128&as=metadata'
+import codyrobertsphotosrcsetwebp from "/assets/images/cody-roberts-ui-ux-designer-photo.webp?w=256&format=webp&as=srcset";
+import codyrobertsphotosrcsetpng from "/assets/images/cody-roberts-ui-ux-designer-photo.png?w=256&format=png&as=srcset";
+import { src as codyrobertsphotoplaceholder } from "/assets/images/cody-roberts-ui-ux-designer-photo.png?w=128&as=metadata";
 
-const codyRobertsPhotoElement = document.querySelector('#cody-roberts-ui-ux-designer-photo');
+const codyRobertsPhotoElement = document.querySelector(
+  "#cody-roberts-ui-ux-designer-photo"
+);
 if (codyRobertsPhotoElement) {
   codyRobertsPhotoElement.innerHTML = `
     <picture>
@@ -74,7 +76,7 @@ if (codyRobertsPhotoElement) {
       <img 
           src="${codyrobertsphotoplaceholder}"
           loading="lazy"
-          class="w-4xl w-7xl-sm"
+          class="w-7xl rounded-sm sm:w-4xl max-w-none"
           alt="A thumbnail of a japanese study app"/>
     </picture>
   `;

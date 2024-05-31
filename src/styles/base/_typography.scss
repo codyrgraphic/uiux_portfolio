@@ -1,63 +1,47 @@
-.highlight {
-  position: relative;
-  display: block;
-  display: inline-block;
-  @extend .text-color-hl-a;
-}
-
-.highlight::before {
-  content: attr(data-text);
-  position: absolute;
-  @extend .text-color-hl-a;
-  @extend .blur-7;
-  @extend .opacity-40;
-  transform: scale(0.97) translateY(3%);
-}
-
-.input-section {
-  label {
-    @extend .text-m;
-    @extend .text-color-a;
-    @extend .weight-medium;
+@layer base {
+  .highlight {
+    @apply relative inline-block text-hl-a;
   }
-  .label-error {
-    @extend .text-color-bad-a;
+
+  .highlight::before {
+    content: attr(data-text);
+    @apply absolute text-hl-a blur-7 opacity-50 scale-[0.97] translate-y-[3%];
   }
-}
 
-input {
-  @extend .weight-light;
-  @extend .text-s;
-  @extend .text-color-a;
-}
+  .input-section {
+    label {
+      @apply text-base text-a font-medium;
+    }
+    .label-error {
+      @apply text-bad-a;
+    }
+  }
 
-input::placeholder {
-  @extend .text-color-b;
-  @extend .weight-light;
-}
+  input {
+    @apply font-light text-sm text-a;
+  }
 
-.input-error {
-  @extend .text-color-bad-a;
-}
+  input::placeholder {
+    @apply text-b font-light;
+  }
 
-.input-error::placeholder {
-  @extend .text-color-bad-b;
-}
+  .input-error {
+    @apply text-bad-a;
+  }
 
-textarea {
-  @extend .weight-light;
-  line-height: 1.6;
-  @extend .text-color-a;
-  @extend .text-s;
-}
+  .input-error::placeholder {
+    @apply text-bad-b;
+  }
 
-textarea::placeholder {
-  @extend .text-color-b;
-  @extend .weight-light;
-}
+  textarea {
+    @apply font-light text-a text-sm;
+  }
 
-.error-message {
-  @extend .text-color-bad-a;
-  @extend .text-xs;
-  display: none;
+  textarea::placeholder {
+    @apply text-b font-light;
+  }
+
+  .error-message {
+    @apply text-bad-a text-xs hidden;
+  }
 }

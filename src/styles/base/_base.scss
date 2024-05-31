@@ -1,74 +1,50 @@
-html,
-body {
-  transition: all 0.2s ease;
-  &::-webkit-scrollbar {
-    display: none;
+@layer base {
+  html,
+  body {
+    @apply scroll-smooth antialiased text-a bg-a font-gotham transition-all duration-100 scrollbar-hide;
   }
-  -ms-overflow-style: none; // IE and Edge
-  scrollbar-width: none; // Firefox
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  font-family: "Gotham", Arial, sans-serif;
-  line-height: 1.6;
-  @extend .text-color-a;
-  background-color: var(--token-color-surface-a);
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium text-a;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  h1 {
+    @apply text-4xl leading-snug;
+  }
+  h2 {
+    @apply text-3xl leading-normal;
+  }
+  h3 {
+    @apply text-2xl leading-normal;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend .weight-medium;
-  @extend .text-color-a;
-  line-height: 130%;
-}
+  p {
+    @apply text-base font-book leading-relaxed tracking-normal;
+  }
 
-h1 {
-  @extend .text-4xl;
-}
-h2 {
-  @extend .text-3xl;
-}
-h3 {
-  @extend .text-2xl;
-}
-h4 {
-  @extend .text-xl;
-}
-h5 {
-  @extend .text-xl;
-}
-h6 {
-  @extend .text-l;
-}
+  ul {
+    @apply list-none;
+  }
 
-p {
-  @extend .text-m;
-  @extend .weight-book;
-}
+  li {
+    @apply text-base font-book leading-relaxed;
+  }
 
-ul {
-  list-style: none;
-}
-
-li {
-  @extend .text-m;
-  @extend .weight-book;
-}
-
-label {
-  @extend .text-l;
-  @extend .weight-book;
-  @extend .flex;
-}
-
-@mixin font-gotham {
-  @extend .weight-medium;
+  label {
+    @apply text-lg font-book flex;
+  }
 }

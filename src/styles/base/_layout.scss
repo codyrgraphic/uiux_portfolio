@@ -1,90 +1,44 @@
-.section {
-  @extend .flex;
-  @extend .px-5xl;
-  @extend .py-3xl;
-  @extend .gap-2xl;
-  @extend .flex-column;
-  @extend .jus-center;
-  @extend .ali-baseline;
-  width: 100%;
-  min-height: 640px;
-  max-width: 1200px;
-  @extend .px-xl-sm;
-  align-self: center;
-  justify-self: center;
-  scroll-margin-top: 100px;
-}
-
-.input-section {
-  @extend .flex-column;
-  @extend .gap-3xs;
-  @extend .w-full;
-}
-
-.contact-form {
-  @extend .flex;
-  @extend .flex-column;
-  @extend .gap-l;
-  @extend .w-full;
-  max-width: 600px;
-}
-
-input {
-  @extend .py-m;
-  @extend .px-s;
-  @extend .ali-center;
-  @extend .w-full;
-  @extend .corner-s;
-  @extend .border-m-b;
-  box-sizing: border-box;
-  background-color: transparent;
-
-  &:focus {
-    outline: none;
+@layer base {
+  .section {
+    @apply flex flex-col justify-center items-baseline w-full max-w-screen-xl px-xl py-3xl gap-2xl self-center justify-self-center scroll-m-24 sm:pt-3xl sm:px-5xl;
   }
-}
 
-input-error {
-  @extend .text-color-bad-a;
-}
+  input {
+    @apply py-md px-sm items-center w-full rounded-sm border-sm border-b bg-transparent;
 
-textarea {
-  min-height: 120px;
-  resize: none;
-  @extend .py-m;
-  @extend .px-s;
-  @extend .ali-center;
-  @extend .w-full;
-  @extend .corner-s;
-  @extend .border-m-b;
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: transparent;
-  &:focus {
-    outline: none;
+    &:focus {
+      @apply outline-none border-a;
+    }
   }
-}
 
-label {
-  @extend .flex-column;
-  @extend .ali-start;
-  @extend .gap-s;
-
-  .top {
-    @extend .flex-row;
-    @extend .jus-between;
-    @extend .ali-center;
-    @extend .w-full;
+  input-error {
+    @apply text-bad-a;
   }
-}
 
-.tools-skills-list {
-  @extend .flex;
-  @extend .flex-column;
-  @extend .gap-2xs;
-  li {
-    @extend .gap-s;
-    @extend .flex;
-    @extend .ali-center;
+  textarea {
+    @apply focus:outline-none focus:border-a min-h-36 resize-y py-md px-sm items-center w-full rounded-sm border-b border-sm overflow-hidden bg-transparent;
+  }
+
+  label {
+    @apply flex-col items-start gap-sm;
+
+    .top {
+      @apply flex-row justify-between items-center w-full;
+    }
+  }
+
+  .tools-skills-list {
+    @apply flex flex-col gap-xs;
+    li {
+      @apply gap-sm flex items-center;
+    }
+  }
+
+  .scroll-hidden {
+    @apply opacity-0 blur-1 -translate-x-2 scale-[0.98] transition-all duration-300;
+  }
+
+  .scroll-show {
+    @apply opacity-100 blur-0 translate-x-0 scale-100 transition-all duration-300 delay-100;
   }
 }
