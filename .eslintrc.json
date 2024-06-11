@@ -1,0 +1,19 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:svelte3/recommended"
+    ],
+    "overrides": [
+      {
+        "files": ["*.svelte"],
+        "processor": "svelte3/svelte3"
+      }
+    ],
+    "settings": {
+      "svelte3/ignore-styles": () => true
+    },
+    "rules": {
+      // Your custom rules
+    }
+  }

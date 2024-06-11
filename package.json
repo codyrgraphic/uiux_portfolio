@@ -1,23 +1,35 @@
 {
   "name": "uiux-folio",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint:css": "stylelint '**/*.{css,scss,svelte}'"
   },
+  "type": "module",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "sass": "^1.77.1",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^6.0.1",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "svelte-preprocess": "^5.1.4",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.11",
     "vite-imagetools": "^7.0.2",
     "vite-plugin-html-inject": "^1.1.2"
   },
   "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "chokidar": "^3.6.0",
+    "lodash-es": "^4.17.21",
+    "svelte": "^4.2.17",
     "tailwindcss-gradients": "^3.0.0"
   }
 }

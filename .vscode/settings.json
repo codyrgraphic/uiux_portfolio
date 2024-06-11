@@ -1,0 +1,33 @@
+{
+  "scss.validate": false,
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "javascript",
+    "javascript": "javascript",
+    "javascriptreact": "javascript",
+    "typescript": "javascript",
+    "typescriptreact": "javascript",
+    "html": "html",
+    "vue": "html",
+    "svelte": "html",
+    "php": "html",
+    "blade": "html",
+    "markdown": "html",
+    "scss": "scss",
+    "mjs": "javascript"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw\\(([^)]*)",
+    "tw\\.\\w+`([^`]*)",
+    "tw\\(.*?\\)`([^`]*)"
+  ],
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
+}
