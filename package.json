@@ -1,6 +1,6 @@
 {
   "name": "uiux-folio",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
