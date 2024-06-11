@@ -34,7 +34,7 @@
   async function handleSubmit(event) {
     event.preventDefault();
 
-    validateEmail(); // Ensure email is validated on form submission
+    validateEmail();
 
     if (!isValid) {
       return;
@@ -47,7 +47,7 @@
     try {
       const response = await fetch('/', {
         method: 'POST',
-        body: new URLSearchParams(data),
+        body: new FormData(event.target),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -156,6 +156,7 @@
       id="contact-form"
       class="scroll-hidden flex flex-col gap-lg w-full max-w-screen-sm"
       method="POST"
+      action="https://codyr.netlify.app/"
       novalidate
       netlify
       data-netlify="true"
