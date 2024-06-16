@@ -42,12 +42,16 @@
 
     const form = event.target;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const data = new URLSearchParams();
+
+    for (const pair of formData.entries()) {
+      data.append(pair[0], pair[1]);
+    }
 
     try {
       const response = await fetch('/', {
         method: 'POST',
-        body: new FormData(event.target),
+        body: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -92,7 +96,7 @@
 
     <div class="flex flex-col gap-lg items-start">
       <p class="scroll-hidden">
-        <span class="text-b">Discuss a project, collaborate or just</span>
+        <span class="text-b">Discuss a or just</span>
         <span>say hello.</span>
       </p>
 
@@ -156,7 +160,7 @@
       id="contact-form"
       class="scroll-hidden flex flex-col gap-lg w-full max-w-screen-sm"
       method="POST"
-      action="https://codyr.netlify.app/"
+      action="/"
       novalidate
       netlify
       data-netlify="true"
