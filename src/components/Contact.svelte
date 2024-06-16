@@ -8,13 +8,14 @@
   let subject = '';
   let messageInput;
 
-  // Reactive statement to validate email and update subject whenever email changes
+  const emailPattern = String.raw`[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$`;
+
   $: {
     updateSubject();
   }
 
   function validateEmail() {
-    const regex = /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/;
+    const regex = new RegExp(emailPattern);
     if (!email) {
       emailError = 'Email is required';
       isValid = false;
@@ -79,11 +80,9 @@
       autoExpandField(this);
     });
 
-    // Initial call to set the proper height on page load, in case there is any pre-filled content
     autoExpandField(messageInput);
   });
 
-  // Ensure email validation error is cleared on focus
   function clearEmailError() {
     emailError = '';
     isValid = true;
@@ -158,6 +157,7 @@
     </div>
     <form
       id="contact-form"
+      name="contact"
       class="scroll-hidden flex flex-col gap-lg w-full max-w-screen-sm"
       method="POST"
       action="/"
@@ -182,7 +182,7 @@
             placeholder="eg. john.smith@email.com"
             bind:value={email}
             required
-            pattern={`[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$`}
+            pattern={emailPattern}
             autocomplete="email"
             on:focus={clearEmailError}
           />
