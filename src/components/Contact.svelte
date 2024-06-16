@@ -156,7 +156,6 @@
       </div>
     </div>
     <form
-      id="contact-form"
       name="contact"
       class="scroll-hidden flex flex-col gap-lg w-full max-w-screen-sm"
       method="POST"
@@ -166,6 +165,7 @@
       data-netlify="true"
       on:submit={handleSubmit}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div class="flex-col gap-3xs w-full">
         <label for="email">
           <div class="flex flex-row justify-start gap-md items-center w-full">
@@ -209,6 +209,7 @@
       />
       <button type="submit" class="primary w-full sm:w-fit">Send</button>
     </form>
+
     <div class="w-xl h-xl icon-hl"></div>
   </section>
 </main>
