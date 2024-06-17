@@ -10,9 +10,7 @@
 
   const emailPattern = String.raw`[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$`;
 
-  $: {
-    updateSubject();
-  }
+  $: subject = `New message from ${email}`;
 
   function validateEmail() {
     const regex = new RegExp(emailPattern);
@@ -26,10 +24,6 @@
       emailError = '';
       isValid = true;
     }
-  }
-
-  function updateSubject() {
-    subject = `New message from ${email}`;
   }
 
   async function handleSubmit(event) {
@@ -50,7 +44,7 @@
     }
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('.netlify/functions/submitForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -199,12 +193,7 @@
           ></textarea>
         </label>
       </div>
-      <input
-        type="hidden"
-        name="subject"
-        id="email-subject"
-        bind:value={subject}
-      />
+      <input type="hidden" name="subject" bind:value={subject} />
       <button type="submit" class="primary w-full sm:w-fit">Send</button>
     </form>
 
