@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { showToast } from '../stores/toastStore.js'; // Adjust the import path as needed
+  import { showToast } from '../stores/toastStore.js';
 
   let email = '';
   let emailError = '';
@@ -50,12 +50,12 @@
     }
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('.netlify/functions/submitForm', {
         method: 'POST',
-        body: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
+        body: data,
       });
 
       if (response.ok) {
@@ -156,16 +156,14 @@
       </div>
     </div>
     <form
-      name="contact"
+      name="contact-form"
       class="scroll-hidden flex flex-col gap-lg w-full max-w-screen-sm"
       method="POST"
-      action="/"
       novalidate
-      netlify
       data-netlify="true"
       on:submit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact-form" />
       <div class="flex-col gap-3xs w-full">
         <label for="email">
           <div class="flex flex-row justify-start gap-md items-center w-full">
