@@ -85,14 +85,14 @@
 
 <main>
   <section id="contact" class="section h-auto pb-6xl">
-    <h1 class="scroll-hidden">Get in touch</h1>
-
-    <div class="flex flex-col gap-lg items-start">
+    <div class="flex flex-col gap-3xs">
+      <h2 class="scroll-hidden">Get in touch</h2>
       <p class="scroll-hidden">
         <span class="text-b">Discuss a or just</span>
         <span>say hello.</span>
       </p>
-
+    </div>
+    <div class="flex flex-col gap-lg items-start">
       <div class="scroll-hidden flex gap-xl content-center items-center">
         <a
           href="https://www.linkedin.com/in/codyrco"

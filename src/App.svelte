@@ -10,7 +10,7 @@
   import Contact from './components/Contact.svelte';
 </script>
 
-<main class="flex flex-col ali-center pb-6xl pt-6xl sm:pt-0">
+<main class="flex flex-col items-center pb-6xl pt-6xl sm:pt-0">
   <ObserverWrapper>
     <Header />
     <Nav />

@@ -7,7 +7,7 @@
   <section id="projects" class="section">
     <div class="flex flex-col gap-3xs">
       <h2 class="scroll-hidden">Projects</h2>
-      <p class="scroll-hidden text-sm text-b">See what I've built.</p>
+      <p class="scroll-hidden text-b">See what I've built.</p>
     </div>
     <div class="flex flex-col md:flex-row md:gap-lg gap-xl sm:gap-2xl">
       <div class="flex flex-col gap-md">

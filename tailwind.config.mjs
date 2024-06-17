@@ -290,7 +290,7 @@ export default {
       const newComponents = {
         // Section
         '.section': {
-          '@apply flex flex-col justify-center min-h-fit items-baseline w-full  max-w-screen-xl px-xl py-6xl gap-2xl self-center justify-self-center scroll-m-24 sm:pt-3xl sm:px-5xl':
+          '@apply flex flex-col justify-center min-h-fit items-baseline w-full  max-w-screen-xl px-xl py-7xl gap-2xl self-center justify-self-center scroll-m-24 sm:pt-4xl sm:px-5xl':
             {},
         },
 
