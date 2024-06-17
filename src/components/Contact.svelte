@@ -50,7 +50,7 @@
     }
 
     try {
-      const response = await fetch('.netlify/functions/submitForm', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
