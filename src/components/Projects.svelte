@@ -4,7 +4,7 @@
 </script>
 
 <main>
-  <section id="projects" class="section">
+  <section id="projects" class="z-10 section">
     <div class="flex flex-col gap-3xs">
       <h2 class="scroll-hidden">Projects</h2>
       <p class="scroll-hidden text-b">See what I've built.</p>

@@ -2,7 +2,10 @@
 </script>
 
 <main>
-  <section id="intro" class=" section h-auto sm:h-screen max-h-[1400px]">
+  <section
+    id="intro"
+    class="relative z-10 section h-auto sm:h-screen max-h-[1400px]"
+  >
     <h1 class="font-book">
       Transforming ideas into
       <span

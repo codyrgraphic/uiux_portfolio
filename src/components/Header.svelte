@@ -13,10 +13,15 @@
   });
 </script>
 
+<div
+  class="z-20 fixed top-0 h-[2px] w-full bg-a shadow-grey-s300 shadow-[0_0px_34px_48px]"
+></div>
 <header
-  class="flex justify-between items-center px-xl h-6xl fixed top-0 left-0 right-0 backdrop-blur-4 bg-d z-10"
+  class="flex justify-between items-center px-xl h-6xl fixed top-0 left-0 right-0 backdrop-blur-4 bg-d z-40"
 >
-  <h1 class="text-a text-3xl">codyr.co</h1>
+  <a href="#intro">
+    <h1 class="text-a text-3xl">codyr.co</h1>
+  </a>
   <button
     class="focus:outline-none bg-none border-none cursor-pointer"
     aria-haspopup="true"

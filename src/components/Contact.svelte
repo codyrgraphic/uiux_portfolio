@@ -170,7 +170,6 @@
             type="email"
             id="email"
             name="email"
-            class="input-field"
             placeholder="eg. john.smith@email.com"
             bind:value={email}
             required
@@ -194,7 +193,9 @@
         </label>
       </div>
       <input type="hidden" name="subject" bind:value={subject} />
-      <button type="submit" class="primary w-full sm:w-fit">Send</button>
+      <button type="submit" class="primary w-full sm:w-fit" Send
+        ><span data-text="Send">Send</span></button
+      >
     </form>
 
     <div class="w-xl h-xl icon-hl"></div>

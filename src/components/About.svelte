@@ -1,13 +1,7 @@
 <script>
-
-  import AboutA from "./AboutA.svelte";
-  import AboutB from "./AboutB.svelte";
-
-  let showMore = false;
-
-  function toggleShowMore() {
-    showMore = !showMore;
-  }
+  import AboutA from './AboutA.svelte';
+  import AboutB from './AboutB.svelte';
+  import { showMore } from '../stores/aboutStore';
 </script>
 
 <section id="about" class="section">
@@ -26,9 +20,9 @@
       <div id="cody-roberts-ui-ux-designer-photo"></div>
     </div>
     <div id="about-content" class="w-[100%] flex flex-col gap-lg">
-      <AboutA {toggleShowMore} {showMore} />
-      {#if showMore}
-        <AboutB {toggleShowMore} />
+      <AboutA />
+      {#if $showMore}
+        <AboutB />
       {/if}
     </div>
   </div>

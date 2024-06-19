@@ -96,7 +96,24 @@ export default {
         book: '300',
         medium: '500',
       },
-
+      colors: {
+        'grey-s100': 'var(--color-grey-s100)',
+        'grey-s200': 'var(--color-grey-s200)',
+        'grey-s300': 'var(--color-grey-s300)',
+        'grey-s400': 'var(--color-grey-s400)',
+        'black-t100': 'var(--color-black-t100)',
+        'black-t200': 'var(--color-black-t200)',
+        'white-s100': 'var(--color-white-s100)',
+        'white-t100': 'var(--color-white-t100)',
+        'white-t200': 'var(--color-white-t200)',
+        'red-s100': 'var(--color-red-s100)',
+        'red-t100': 'var(--color-red-t100)',
+        'green-s100': 'var(--color-green-s100)',
+        'green-s200': 'var(--color-green-s200)',
+        'blue-s100': 'var(--color-blue-s100)',
+        'multi-s100': 'var(--color-multi-s100)',
+        'gradient-s100': 'var(--color-gradient-s100)',
+      },
       textColor: {
         a: 'var(--color-white-s100)',
         b: 'var(--color-white-t100)',
@@ -119,6 +136,7 @@ export default {
         c: 'var(--color-grey-s100)',
         d: 'var(--color-black-t100)',
         e: 'var(--color-black-t200)',
+        f: 'var(--color-black-t300)',
         bad: 'var(--color-red-s100)',
         good: 'var(--color-green-s100)',
       },
@@ -252,7 +270,7 @@ export default {
 
         // Text inputs
         input: {
-          '@apply py-md px-sm items-center w-full rounded-sm border-sm border-b bg-transparent font-light text-sm text-a focus:outline-none focus:border-a':
+          '@apply py-md px-sm items-center w-full rounded-sm border-sm border-b bg-a font-light text-sm text-a focus:outline-none focus:border-a':
             {},
         },
         'input::placeholder': {
@@ -265,7 +283,7 @@ export default {
           '@apply text-bad-b': {},
         },
         textarea: {
-          '@apply font-light text-a text-sm focus:outline-none focus:border-a min-h-36 resize-y py-md px-sm items-center w-full rounded-sm border-b border-sm overflow-hidden bg-transparent':
+          '@apply font-light text-a text-sm focus:outline-none focus:border-a min-h-36 resize-y py-md px-sm items-center w-full rounded-sm border-b border-sm overflow-hidden bg-a':
             {},
         },
         'textarea::placeholder': {
@@ -290,45 +308,43 @@ export default {
       const newComponents = {
         // Section
         '.section': {
-          '@apply flex flex-col justify-center min-h-fit items-baseline w-full  max-w-screen-xl px-xl py-7xl gap-2xl self-center justify-self-center scroll-m-24 sm:pt-4xl sm:px-5xl':
+          '@apply flex flex-col justify-center min-h-fit items-baseline w-full z-40 max-w-screen-xl px-xl py-7xl gap-2xl self-center justify-self-center scroll-m-24 sm:pt-4xl sm:px-5xl':
             {},
         },
 
-        // Button
+        // Button component
         '.btn': {
           '@apply px-xl h-btn flex items-center justify-center min-h-sm min-w-fit cursor-pointer text-lg text-a rounded-md transition ease-in gap-md duration-200':
             {},
           '&:active, &.pressed': {
             '@apply scale-[0.97] transition ease-in duration-75': {},
           },
-          '&:hover span': {
-            '@apply highlight': {},
+          '@media (hover: hover)': {
+            '&:hover span': {
+              '@apply highlight': {},
+            },
           },
         },
         '.primary': {
           '@apply btn font-medium bg-b': {},
-          '&:hover span': {
-            '@apply highlight': {},
-          },
-          '&:hover': {
-            '@apply bg-c': {},
+          '@media (hover: hover)': {
+            '&:hover': {
+              '@apply bg-c': {},
+            },
           },
         },
         '.secondary': {
-          '@apply btn bg-transparent border-sm border-b': {},
-          '&:hover span': {
-            '@apply highlight': {},
-          },
-          '&:hover': {
-            '@apply bg-d': {},
+          '@apply btn bg-e backdrop-blur-1 border-sm border-b': {},
+          '@media (hover: hover)': {
+            '&:hover': {
+              '@apply bg-d': {},
+            },
           },
         },
         '.tertiary': {
           '@apply btn px-0 h-fit font-book flex-row': {},
-          span: {
-            '@apply text-a': {},
-          },
         },
+
         // Toast
         '.toast': {
           '@apply sm:ml-xl fixed flex items-start justify-center z-10 bg-d backdrop-blur-4 text-a font-book text-base text-start left-0 right-0 bottom-0 gap-md rounded-t-md sm:rounded-b-md p-lg pr-2xl pb-2xl sm:py-lg sm:pl-lg sm:left-auto sm:right-xl sm:bottom-xl':

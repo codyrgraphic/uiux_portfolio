@@ -25,7 +25,7 @@
 
 {#if isVisible}
   <nav
-    class="dropdown-menu fixed right-0 sm:w-auto sm:left-auto bg-d rounded-b-lg backdrop-blur-4 z-10 w-full left-0 top-6xl sm:pb-lg"
+    class="dropdown-menu fixed right-0 sm:w-auto sm:left-auto bg-d rounded-b-lg backdrop-blur-4 z-30 w-full left-0 top-6xl sm:pb-lg"
     aria-label="Main navigation"
   >
     <ul class="list-none m-0 p-0">
