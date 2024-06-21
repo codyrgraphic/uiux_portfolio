@@ -42,15 +42,20 @@
 ></div>
 
 <div
-  class="fixed top-[35%] bottom-[30%] w-full -skew-y-[10deg] bg-a shadow-grey-s300 shadow-[0_0px_200px_200px] opacity-85"
+  class="fixed top-10 bottom-0 w-full -skew-y-[5deg] bg-gradient-black-100 opacity-[90%]"
 ></div>
 
 <style>
   .grid-pattern {
     background-image: radial-gradient(
-      circle at 35px 35px,
-      var(--color-white-s100) 1px,
-      transparent 0
-    );
+        circle at 35px 35px,
+        var(--color-white-s100) 1px,
+        transparent 0
+      ),
+      radial-gradient(
+        circle at 18px 18px,
+        var(--color-white-t100) 1px,
+        transparent 0
+      );
   }
 </style>

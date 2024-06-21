@@ -1,6 +1,6 @@
 {
   "name": "uiux-folio",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -31,6 +31,8 @@
     "lodash-es": "^4.17.21",
     "netlify-cli": "^17.28.0",
     "svelte": "^4.2.17",
+    "svelte-pdf-simple": "^2.0.0",
+    "tailwindcss-blend-mode": "^1.0.0",
     "tailwindcss-gradients": "^3.0.0"
   }
 }
