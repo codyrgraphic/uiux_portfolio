@@ -143,6 +143,8 @@ export default {
       backgroundImage: {
         multi: 'var(--color-multi-s100)',
         gradient: 'var(--color-gradient-s100)',
+        'gradient-black-100':
+          'linear-gradient(170deg, transparent 0%, var(--color-grey-s300) 30%, var(--color-grey-s300) 50%, var(--color-grey-s300) 80%, transparent 100%)',
       },
       keyframes: {
         'ping-slow': {
@@ -176,6 +178,7 @@ export default {
     },
   },
   plugins: [
+    require('tailwindcss-blend-mode')(),
     function ({ addBase }) {
       const newBase = {
         'html, body': {
